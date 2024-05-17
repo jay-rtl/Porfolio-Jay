@@ -1,0 +1,109 @@
+@media only screen and (max-width: 480px)  {
+    
+        section{
+        width: 480px;
+    }
+    header {
+        height: 10% ;
+        width: 100%; 
+    }
+
+    .pic_nako img {
+        width: 45%;
+        height: auto;
+        right: -120px;
+        bottom: 200px;
+        position: absolute;
+    }
+    .text1 {
+        top: 150px; 
+    }
+
+    .web {
+        font-size: 20px; 
+        left: 10px;
+    }
+
+    #home {
+        padding-top: 50px; 
+        
+    }
+    .text1{
+        margin-top: 100px;
+        margin-left: 5px;
+        font-size: 20px;
+    }
+    .text1 a{
+        font-size: 40px;
+    }
+    .navbar-toggler {
+        padding: 0.25rem 0.75rem;
+        font-size: 1.25rem;
+        line-height: 1;
+        background-color: transparent;
+        border: 1px solid transparent;
+        border-radius: 0.25rem;
+        position: absolute;
+        right: .8in;
+}
+.web {
+    position: absolute;
+    bottom: 2in;
+    
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: black;
+    color: white;
+    padding: 10px;
+    border-radius: 50px;
+    letter-spacing: 4px;
+    margin-left: 40px;
+}
+.hide{
+    display: none;
+}
+
+    .elem .gallery {
+        position: absolute;
+        bottom: -7in;
+        left: -2in;
+        
+    }
+    .elem{
+        position: absolute ;
+        left: 250px;
+    }
+    #edu{
+        height: 200vh;
+    }
+    
+    .note_0 {
+        position: absolute;
+        width: 80%;
+        background-color: rgb(114, 209, 247);
+        left: 30px;
+        bottom: 220px;
+        max-height: 300px;
+        overflow: auto;
+        text-align: justify;
+        padding: 20px;
+        border-radius: 10%;
+        box-shadow: 10px 10px rgba(0, 0, 0, .3);
+        
+    }
+    .note {
+        z-index: 9999;
+        position: absolute;
+        width: 80%;
+        background-color: rgb(208, 249, 73);
+        right: 60px;
+        bottom: 0;
+        height: 17%;
+        text-align: justify;
+        padding: 20px;
+        overflow: auto;
+        border-radius: 10%;
+        box-shadow: 10px 10px rgba(0, 0,0, .3);
+    }
+
+}

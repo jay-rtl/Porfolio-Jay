@@ -1,0 +1,137 @@
+                          
+                            *{
+                                height: auto;
+                                margin: 0;
+                                padding: 0;
+                                font-family: Arial Rounded 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                            }
+                            
+                            
+                             #home{
+                                position: relative;
+                                height: 100vh;
+                            }
+                            header{
+                                position: fixed;
+                                width: 100% !important;
+                                height: 18%;
+                                z-index: 9999;
+                                background-color: white;
+                            }
+                            .pic_nako img{
+                                position: absolute;
+                                width: 20%;
+                                height: 70%;
+                                border-radius: 50%;
+                                right: 10%;
+                                bottom: 30px;
+                            }
+                            .text1{
+                                position: absolute;
+                               
+                                font-size: ;
+                                font-weight: bold;
+                                letter-spacing: 5px;
+                                height: 40%;
+                                width: 60%;
+                          
+                            }
+                            .web{
+                                position: absolute;
+                                top: 35%;
+                                left: 12%;
+                                font-size: 40px;
+                                font-family: Arial, Helvetica, sans-serif;
+                                background-color: black;
+                                color: white;
+                                padding: 10px;
+                                border-radius: 50px;
+                                letter-spacing: 4px;
+                            }
+                            .logo{
+                                width: 150px;
+                                height: 150px;
+                                padding-left: 10px;
+                            }
+                            nav{
+                                display: flex;
+                                width: 100%;
+                                margin: auto;
+                                padding: 10px 0px;
+                                align-items: center;
+                                justify-content: space-between;
+                            }
+                            nav ul li{
+                                display: inline-block;
+                                list-style: none;
+                                margin: 10px 20px;
+
+                            }
+                            nav ul li a{
+                                text-decoration: none;
+                                color:black;
+                                font-weight: bold;
+                            }
+                            
+                            
+                            
+                            #Edu{
+                                position: relative;
+                                height: auto;
+                                
+                            }
+                            ;
+                            
+                            #Contact {
+                                position: relative;
+                                height: auto;
+                                background-color: #f8f8f8;
+                                text-align: center;
+                                padding: 50px 0;
+                            }
+                            
+                            .contact-section h2 {
+                                font-size: 2.5em;
+                                color: #333;
+                                margin-bottom: 30px;
+                            }
+                            
+                            .contact-container {
+                                max-width: 600px;
+                                margin: 0 auto;
+                                
+                            }
+                            
+                            .contact-item {
+                                font-size: 1.2em;
+                                margin: 15px 0;
+                            }
+                            
+                            .contact-item a {
+                                color: #007bff;
+                                text-decoration: none;
+                            }
+                            
+                            .contact-item a:hover {
+                                text-decoration: underline;
+                            }
+                            
+
+                            #Contact {
+                                position: relative;
+                                height: auto;
+                                background-color: #f8f8f8;
+                                text-align: center;
+                                padding: 50px 0;
+                            }
+                            #Acco{
+                                height: auto;
+                            }
+                            .about-me{
+                                position: relative;
+                                top: 80%;
+                                left: 40%;
+                                font-size: 15px;
+                            }
+                            
+                            
