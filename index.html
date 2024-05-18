@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    
+     <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
     <style>
         body, html {
             margin: 0;
@@ -94,42 +94,238 @@
             }
         }
         .certificate-section {
-            text-align: center;
-            margin: 20px;
-        }
-        .certificate-section h2 {
-            font-size: 2rem;
-            margin-bottom: 20px;
-        }
-        .certificate-container {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-        .certificate-item {
-            margin: 10px;
-            padding: 20px;
-            border: 1px solid #ccc;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-            border-radius: 10px;
-            width: 300px;
-            height: 400px;
-            overflow: hidden;
-        }
-        .certificate-item h3 {
-            font-size: 1.2rem;
-            margin-bottom: 10px;
-        }
-        .certificate-item p {
-            font-size: 1rem;
-            margin-bottom: 20px;
-        }
-        .certificate-item embed {
-            width: 100%;
-            height: 70%;
-            border: none;
+            padding: 60px 0;
+            background-color: #f8f9fa;
         }
 
+        .certificate-section h2 {
+            font-size: 3rem;
+            margin-bottom: 40px;
+            text-align: center;
+            font-family: 'Courier New', Courier, monospace;
+            color: #333;
+            position: relative;
+        }
+
+        .certificate-section h2::before {
+            content: "</>";
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: -20px;
+            color: #333;
+            font-size: 2rem;
+        }
+
+        .certificate-item {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .certificate-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .certificate-title {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: #333;
+            font-weight: bold;
+        }
+
+        .certificate-date {
+            font-size: 1rem;
+            margin-bottom: 20px;
+            color: #666;
+        }
+
+        .certificate-img img {
+            width: auto;
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.col-md-4 {
+    position: relative;
+    width: 30%;
+    margin: 1%;
+}
+
+.img-fluid {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.image-container {
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-container:hover .overlay {
+    opacity: 1;
+}
+
+.text {
+    color: white;
+    font-size: 20px;
+    text-align: center;
+}
+
+.mb-4 {
+    margin-bottom: 1.5rem;
+}
+
+.rounded {
+    border-radius: 5px;
+}
+
+.shadow {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.container-1 {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.text-white {
+    color: white;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid white;
+}
+
+.mb-4 {
+    margin-bottom: 1.5rem;
+}
+
+.display-4 {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.font-weight-bold {
+    font-weight: 700;
+}
+
+.lead {
+    font-size: 1.25rem;
+    font-weight: 300;
+}
+
+.font-italic {
+    font-style: italic;
+}
+
+#home {
+    background-size: cover;
+    background-position: center;
+    padding: 100px 0;
+}
+
+.content {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+}
+.container-2 {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.mb-5 {
+    margin-bottom: 3rem;
+}
+
+.certificate-item {
+    margin-bottom: 2rem;
+}
+
+.certificate-img-container {
+    position: relative;
+}
+
+.img-fluid {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+}
+
+.certificate-img-container:hover .overlay {
+    opacity: 1;
+}
+
+.text {
+    color: white;
+    font-size: 20px;
+    text-align: center;
+}
 
     </style>
 </head>
@@ -156,17 +352,18 @@
 </header>
 
 <section id="home" style="background-image: url('img/background.jpg');">
-  <div class="container">
-      <div class="row justify-content-center">
-          <div class="col-md-8 text-white">
-              <div class="content">
-                  <h1 class="display-4 font-weight-bold mb-4">Welcome to My Portfolio</h1>
-                  <p class="lead mb-4">I'm Francis Jay Rotol, a passionate individual dedicated to learning and problem-solving. Let's make a meaningful impact together!</p>
-                  <p class="font-italic">I thrive in dynamic environments where challenges abound, providing opportunities for growth and innovation. With a keen eye for detail and a knack for thinking outside the box, I'm dedicated to tackling tasks with efficiency and precision. Whether it's mastering new skills or finding creative solutions to complex problems, I approach every endeavor with enthusiasm and determination. I believe in the power of continuous learning and strive to adapt and evolve in an ever-changing world.</p>
-              </div>
-          </div>
-      </div>
-  </div>
+    <div class="container-1">
+        <div class="row justify-content-center">
+            <div class="col-md-8 text-white text-center">
+                <div class="content">
+                    <img src="img/profile.jpg" alt="Francis Jay Rotol" class="profile-pic mb-4">
+                    <h1 class="display-4 font-weight-bold mb-4">Welcome to My Portfolio</h1>
+                    <p class="lead mb-4">I'm Francis Jay Rotol, a passionate individual dedicated to learning and problem-solving. Let's make a meaningful impact together!</p>
+                    <p class="font-italic">I thrive in dynamic environments where challenges abound, providing opportunities for growth and innovation. With a keen eye for detail and a knack for thinking outside the box, I'm dedicated to tackling tasks with efficiency and precision. Whether it's mastering new skills or finding creative solutions to complex problems, I approach every endeavor with enthusiasm and determination. I believe in the power of continuous learning and strive to adapt and evolve in an ever-changing world.</p>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 
 
@@ -212,7 +409,6 @@
             <li>Working knowledge in MS Word, MS Excel, MS PowerPoint, MS Publisher</li>
             <li>Set up and maintain local and wide area networks and install hardware and software applications</li>
             <li>Design web pages and other similar computer graphics and multimedia applications such as Adobe Photoshop</li>
-            <li>Design publications using Adobe PageMaker, Corel Draw, and similar software</li>
             <li>Proficient in internet use and e-mail correspondence</li>
             <li>Proficient at troubleshooting computer problems</li>
             <li>A lot of experience installing CCTV systems</li>
@@ -224,22 +420,32 @@
   </div>
 </section>
 <section id="Certificates" class="certificate-section">
-  <h2>Certificates</h2>
-  <div class="certificate-container">
-      <div class="certificate-item">
-          <h3>Cisco CCNA7: Switching, Routing, and Wireless Essentials</h3>
-          <p>Completed: 29 Oct 2022</p>
-          <embed src="img/jay6.pdf" type="application/pdf" />
-      </div>
-      <div class="certificate-item">
-          <h3>Cisco CCNA7: Enterprise Networking, Security, and Automation</h3>
-          <p>Completed: 26 Jan 2023</p>
-          <embed src="img/jay7.pdf" type="application/pdf" />
-      </div>
-      
-  </div>
+    <div class="container-2">
+        <h2 class="text-center mb-5">Certificates</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="certificate-item">
+                    <div class="certificate-img-container">
+                        <img src="img/jay6.jpg" alt="Certificate 1" class="img-fluid">
+                        <div class="overlay">
+                            <div class="text">Cisco CCNA7: Switching, Routing, and Wireless Essentials<br>Completed: 29 Oct 2022</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="certificate-item">
+                    <div class="certificate-img-container">
+                        <img src="img/jay7.jpg" alt="Certificate 2" class="img-fluid">
+                        <div class="overlay">
+                            <div class="text">Cisco CCNA7: Enterprise Networking, Security, and Automation<br>Completed: 26 Jan 2023</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
-
 <section id="Acco" class="pt-5 pb-5">
     <div class="container">
         <h2 class="text-center mb-5">Accomplishment Report: Anjo World Theme Park</h2>
@@ -330,33 +536,63 @@
     </div>
 </section>
 <section id="Images">
-  <div class="container">
-      <div class="row justify-content-center">
-          <div class="col-md-8 text-center">
-              <div class="row justify-content-center">
-                  <div class="col-md-4 mb-4">
-                      <img src="img/jay.jpg" alt="Image 1" class="img-fluid rounded shadow">
-                  </div>
-                  <div class="col-md-4 mb-4">
-                      <img src="img/jay1.jpg" alt="Image 2" class="img-fluid rounded shadow">
-                  </div>
-                  <div class="col-md-4 mb-4">
-                      <img src="img/jay2.png" alt="Image 3" class="img-fluid rounded shadow">
-                  </div>
-                  <div class="col-md-4 mb-4">
-                      <img src="img/jay3.jpg" alt="Image 4" class="img-fluid rounded shadow">
-                  </div>
-                  <div class="col-md-4 mb-4">
-                      <img src="img/jay4.jpg" alt="Image 5" class="img-fluid rounded shadow">
-                  </div>
-                  <div class="col-md-4 mb-4">
-                      <img src="img/jay5.jpg" alt="Image 6" class="img-fluid rounded shadow">
-                  </div>
-              </div>
-          </div>
-      </div>
-  </div>
-</section>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8 text-center">
+                <div class="row justify-content-center">
+                    <div class="col-md-4 mb-4">
+                        <div class="image-container">
+                            <img src="img/jay.jpg" alt="Image 1" class="img-fluid rounded shadow">
+                            <div class="overlay">
+                                <div class="text">CCTV<br>INSTALLATION</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="image-container">
+                            <img src="img/jay1.jpg" alt="Image 2" class="img-fluid rounded shadow">
+                            <div class="overlay">
+                                <div class="text">CCTV<br>INSTALLATION</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="image-container">
+                            <img src="img/jay2.png" alt="Image 3" class="img-fluid rounded shadow">
+                            <div class="overlay">
+                                <div class="text">LAPTOP<br>TROUBLESHOOTING INTERNAL</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="image-container">
+                            <img src="img/jay3.jpg" alt="Image 4" class="img-fluid rounded shadow">
+                            <div class="overlay">
+                                <div class="text">CAR RENTAL<br>Adobe Photoshop</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="image-container">
+                            <img src="img/jay4.jpg" alt="Image 5" class="img-fluid rounded shadow">
+                            <div class="overlay">
+                                <div class="text">PRINTER<br>TROUBLESHOOTING INTERNAL</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="image-container">
+                            <img src="img/jay5.jpg" alt="Image 6" class="img-fluid rounded shadow">
+                            <div class="overlay">
+                                <div class="text">TROUBLESHOOT<br>Adobe Photoshop</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> 
 <section id="Iframe" class="iframe-section">
   <div class="container">
     <div class="row justify-content-center">
