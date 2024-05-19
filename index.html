@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
      <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
-    <link rel="icon" href="FR.png" type="image">
     <style>
         body, html {
             margin: 0;
@@ -16,6 +15,10 @@
             width: 100%;
             font-family: Arial, sans-serif;
         }
+        .image-container {
+    width: 100%;
+    height: auto;
+  }
 
         /* Header */
         header {
@@ -327,7 +330,69 @@
     font-size: 20px;
     text-align: center;
 }
+#Edu {
+            padding: 60px 0;
+            background-color: #f8f9fa;
+        }
 
+        #Edu .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        #Edu h2 {
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            text-align: center;
+            color: #333;
+            font-family: 'Courier New', Courier, monospace;
+            position: relative;
+        }
+
+        .education-item {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex-basis: calc(25% - 2rem); /* Adjust based on the desired width */
+    box-sizing: border-box;
+    min-width: 250px;
+}
+
+.education-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 1200px) {
+    .education-item {
+        flex-basis: calc(33.33% - 2rem); /* Adjust for medium screens */
+    }
+}
+
+@media (max-width: 992px) {
+    .education-item {
+        flex-basis: calc(50% - 2rem); /* Adjust for small screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .education-item {
+        flex-basis: 100%; /* Adjust for very small screens */
+    }
+}
+
+
+        .education-desc {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .education-list {
+            padding-left: 20px;
+            list-style-type: disc;
+        }
     </style>
 </head>
 <body>
@@ -353,79 +418,61 @@
 </header>
 
 <section id="home" style="background-image: url('img/background.jpg');">
-    <div class="container-1">
-        <div class="row justify-content-center">
-            <div class="col-md-8 text-white text-center">
-                <div class="content">
-                    <img src="img/profile.jpg" alt="Francis Jay Rotol" class="profile-pic mb-4">
-                    <h1 class="display-4 font-weight-bold mb-4">Welcome to My Portfolio</h1>
-                    <p class="lead mb-4">I'm Francis Jay Rotol, a passionate individual dedicated to learning and problem-solving. Let's make a meaningful impact together!</p>
-                    <p class="font-italic">I thrive in dynamic environments where challenges abound, providing opportunities for growth and innovation. With a keen eye for detail and a knack for thinking outside the box, I'm dedicated to tackling tasks with efficiency and precision. Whether it's mastering new skills or finding creative solutions to complex problems, I approach every endeavor with enthusiasm and determination. I believe in the power of continuous learning and strive to adapt and evolve in an ever-changing world.</p>
-                </div>
+    <div class="content">
+        <div class="container text-center text-white">
+            <img src="img/profile.jpg" alt="Profile Picture" class="profile-pic mb-4">
+            <h1 class="display-4 font-weight-bold">Francis Jay Rotol</h1>
+            <p class="lead font-italic">IT Specialist | Tech Enthusiast | Success Driven</p>
+            <p class="font-italic">"Striving for success in all aspects of life"</p>
+        </div>
+    </div>
+</section>
+<section id="Edu">
+    <div class="container">
+        <h2 class="text-center">Education</h2>
+        <div class="d-flex flex-wrap justify-content-between">
+            <div class="education-item flex-fill mx-2 my-3" >
+                <h2>Holy Trinity Academy of Loay</h2>
+                <p class="education-desc"><b>Junior and Senior High School</b></p>
+                <p>I was a computer system services awardee in grade 12 and got the best research award with my group.</p>
+            </div>
+            <div class="education-item flex-fill mx-2 my-3">
+                <h2>Center for Industrial Technology and Enterprise (CITE)</h2>
+                <p class="education-desc"><b>Diploma in Computer Engineering Technology</b></p>
+                <ul class="education-list">
+                    <li>Obtained a GWA of 1.55 in the 1st Trimester (June 2022)</li>
+                    <li>CSS NC II Holder (August 2022)</li>
+                    <li>EPAS NC II Holder (September 2022)</li>
+                </ul>
+            </div>
+            <div class="education-item flex-fill mx-2 my-3">
+                <h2>Villalimpia Elementary School</h2>
+                <p class="education-desc"><b>Elementary School</b></p>
+                <p>I was a consistent 2nd honor student and consistent best in math awardee.</p>
+            </div>
+            <div class="education-item flex-fill mx-2 my-3">
+                <h2>Core Competencies</h2>
+                <p class="education-desc"><b>Computer Engineering Technology</b></p>
+                <ul class="education-list">
+                    <li>Working knowledge in MS Word, MS Excel, MS PowerPoint, MS Publisher</li>
+                    <li>Set up and maintain local and wide area networks and install hardware and software applications</li>
+                    <li>Design web pages and other similar computer graphics and multimedia applications such as Adobe Photoshop</li>
+                    <li>Proficient in internet use and e-mail correspondence</li>
+                    <li>Proficient at troubleshooting computer problems</li>
+                    <li>A lot of experience installing CCTV systems</li>
+                    <li>Excel in providing effective tech support</li>
+                </ul>
             </div>
         </div>
     </div>
 </section>
 
-
-
-
-
-
-<section id="Edu">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-6">
-        <div class="education-item">
-          <h2>Holy Trinity Academy of Loay</h2>
-          <p class="education-desc"><b>Junior and Senior High School</b></p>
-          <p>I was a computer system services awardee in grade 12 and got the best research award with my group.</p>
-        </div>
-      </div>
-      <div class="col-md-6">
-        <div class="education-item">
-          <h2>Center for Industrial Technology and Enterprise (CITE)</h2>
-          <p class="education-desc"><b>Diploma in Computer Engineering Technology</b></p>
-          <ul class="education-list">
-            <li>Obtained a GWA of 1.55 in the 1st Trimester (June 2022)</li>
-            <li>CSS NC II Holder (August 2022)</li>
-            <li>EPAS NC II Holder (September 2022)</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-6">
-        <div class="education-item">
-          <h2>Villalimpia Elementary School</h2>
-          <p class="education-desc"><b>Elementary School</b></p>
-          <p>I was a consistent 2nd honor student and consistent best in math awardee.</p>
-        </div>
-      </div>
-      <div class="col-md-6">
-        <div class="education-item">
-          <h2>Core Competencies</h2>
-          <p class="education-desc"><b>Computer Engineering Technology</b></p>
-          <ul class="education-list">
-            <li>Working knowledge in MS Word, MS Excel, MS PowerPoint, MS Publisher</li>
-            <li>Set up and maintain local and wide area networks and install hardware and software applications</li>
-            <li>Design web pages and other similar computer graphics and multimedia applications such as Adobe Photoshop</li>
-            <li>Proficient in internet use and e-mail correspondence</li>
-            <li>Proficient at troubleshooting computer problems</li>
-            <li>A lot of experience installing CCTV systems</li>
-            <li>Excel in providing effective tech support</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section id="Certificates" class="certificate-section">
-    <div class="container-2">
+<section id="Certificates" class="certificate-section pt-5 pb-5" >
+    <div class="container">
         <h2 class="text-center mb-5">Certificates</h2>
         <div class="row">
-            <div class="col-md-6">
-                <div class="certificate-item">
+            <div class="col-md-6 mb-5">
+                <div class="certificate-item p-4 border">
                     <div class="certificate-img-container">
                         <img src="img/jay6.jpg" alt="Certificate 1" class="img-fluid">
                         <div class="overlay">
@@ -434,8 +481,8 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-6">
-                <div class="certificate-item">
+            <div class="col-md-6 mb-5">
+                <div class="certificate-item p-4 border" >
                     <div class="certificate-img-container">
                         <img src="img/jay7.jpg" alt="Certificate 2" class="img-fluid">
                         <div class="overlay">
@@ -447,161 +494,164 @@
         </div>
     </div>
 </section>
+
 <section id="Acco" class="pt-5 pb-5">
     <div class="container">
         <h2 class="text-center mb-5">Accomplishment Report: Anjo World Theme Park</h2>
-
-        <article class="mb-5">
-            <h3 class="mb-3">Introduction</h3>
-            <p>During my DTS (Dual Training System) at Anjo World Theme Park, I dedicated myself to enhancing the operational efficiency and security of the park. This journey has equipped me with valuable skills in CCTV operation and technical support, reflecting my commitment to excellence.</p>
-        </article>
-
-        <article class="mb-5">
-            <h3 class="mb-3">CCTV Operation</h3>
-            <p>My experience with CCTV systems at Anjo World has been extensive and fulfilling. Here are some key highlights:</p>
-            <ul class="list-unstyled pl-3">
-                <li class="mb-2">
-                    <i class="fas fa-video mr-2"></i>
-                    <strong>Learned CCTV Application:</strong> I gained comprehensive knowledge of CCTV systems and their applications within the park's infrastructure.
-                </li>
-                <li class="mb-2">
-                    <i class="fas fa-tasks mr-2"></i>
-                    <strong>Implemented CCTV Protocols:</strong> Successfully applied CCTV protocols to monitor various sections of the theme park, ensuring the safety and security of guests and staff.
-                </li>
-                <li>
-                    <i class="fas fa-tools mr-2"></i>
-                    <strong>Troubleshooting Expertise:</strong> Developed troubleshooting expertise to promptly address any technical issues or anomalies within the CCTV network, ensuring uninterrupted surveillance.
-                </li>
-            </ul>
-        </article>
-
-        <article class="mb-5">
-            <h3 class="mb-3">Technical Support Proficiency</h3>
-            <p>Providing technical support at Anjo World allowed me to hone my skills in a dynamic environment. Some key accomplishments include:</p>
-            <ul class="list-unstyled pl-3">
-                <li class="mb-2">
-                    <i class="fas fa-headset mr-2"></i>
-                    <strong>Technical Support Skills:</strong> Demonstrated proficiency in providing technical support to park visitors and staff, resolving a wide range of issues related to park facilities and equipment.
-                </li>
-                <li class="mb-2">
-                    <i class="fas fa-smile mr-2"></i>
-                    <strong>Customer Satisfaction:</strong> Received positive feedback from patrons and colleagues for delivering prompt and effective technical assistance, enhancing overall customer satisfaction.
-                </li>
-                <li>
-                    <i class="fas fa-book-reader mr-2"></i>
-                    <strong>Continuous Learning:</strong> Maintained a proactive approach to learning emerging technologies and solutions, ensuring up-to-date knowledge to address evolving technical challenges.
-                </li>
-            </ul>
-        </article>
-
-        <article class="mb-5">
-            <h3 class="mb-3">Photoshop Skills</h3>
-            <p>My skills in Adobe Photoshop have been instrumental in creating engaging visual content. Here are some key highlights:</p>
-            <ul class="list-unstyled pl-3">
-                <li class="mb-2">
-                    <i class="fas fa-paint-brush mr-2"></i>
-                    <strong>Graphic Design:</strong> Developed and designed graphics for various projects, enhancing the visual appeal and communication of key messages.
-                </li>
-                <li class="mb-2">
-                    <i class="fas fa-layer-group mr-2"></i>
-                    <strong>Photo Editing:</strong> Proficient in photo editing techniques, including retouching, color correction, and image manipulation.
-                </li>
-                <li>
-                    <i class="fas fa-file-image mr-2"></i>
-                    <strong>Creative Projects:</strong> Successfully completed creative projects that required advanced Photoshop skills, contributing to marketing and promotional efforts.
-                </li>
-            </ul>
-        </article>
-        <article class="mb-5">
-          <h3 class="mb-3">Printer Troubleshooting</h3>
-          <p>My experience in printer troubleshooting has been significant during my tenure at Anjo World Theme Park. Here are some key accomplishments:</p>
-          <ul class="list-unstyled pl-3">
-              <li class="mb-2">
-                  <i class="fas fa-print mr-2"></i>
-                  <strong>Printer Maintenance:</strong> Conducted routine maintenance on printers, ensuring optimal performance and minimizing downtime.
-              </li>
-              <li class="mb-2">
-                  <i class="fas fa-exclamation-triangle mr-2"></i>
-                  <strong>Troubleshooting Expertise:</strong> Identified and resolved printer issues promptly, including paper jams, connectivity issues, and print quality problems.
-              </li>
-              <li>
-                  <i class="fas fa-wrench mr-2"></i>
-                  <strong>Hardware Repair:</strong> Proficient in diagnosing and repairing printer hardware components, contributing to uninterrupted operation of printing facilities.
-              </li>
-          </ul>
-      </article>
-        <article>
-            <h3 class="mb-3">Conclusion</h3>
-            <p>My tenure at Anjo World Theme Park has been both enriching and rewarding. It has allowed me to develop crucial skills in CCTV operation, technical support, and Photoshop, which I believe will be instrumental in my professional growth. I am grateful for the opportunity and look forward to continuing my journey in the tech industry, contributing to the success and safety of the organizations I work with.</p>
-        </article>
-    </div>
-</section>
-<section id="Images">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-8 text-center">
-                <div class="row justify-content-center">
-                    <div class="col-md-4 mb-4">
-                        <div class="image-container">
-                            <img src="img/jay.jpg" alt="Image 1" class="img-fluid rounded shadow">
-                            <div class="overlay">
-                                <div class="text">CCTV<br>INSTALLATION</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 mb-4">
-                        <div class="image-container">
-                            <img src="img/jay1.jpg" alt="Image 2" class="img-fluid rounded shadow">
-                            <div class="overlay">
-                                <div class="text">CCTV<br>INSTALLATION</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 mb-4">
-                        <div class="image-container">
-                            <img src="img/jay2.png" alt="Image 3" class="img-fluid rounded shadow">
-                            <div class="overlay">
-                                <div class="text">LAPTOP<br>TROUBLESHOOTING INTERNAL</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 mb-4">
-                        <div class="image-container">
-                            <img src="img/jay3.jpg" alt="Image 4" class="img-fluid rounded shadow">
-                            <div class="overlay">
-                                <div class="text">CAR RENTAL<br>Adobe Photoshop</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 mb-4">
-                        <div class="image-container">
-                            <img src="img/jay4.jpg" alt="Image 5" class="img-fluid rounded shadow">
-                            <div class="overlay">
-                                <div class="text">PRINTER<br>TROUBLESHOOTING INTERNAL</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 mb-4">
-                        <div class="image-container">
-                            <img src="img/jay5.jpg" alt="Image 6" class="img-fluid rounded shadow">
-                            <div class="overlay">
-                                <div class="text">TROUBLESHOOT<br>Adobe Photoshop</div>
-                            </div>
-                        </div>
-                    </div>
+        <div class="row">
+            <div class="col-md-6 mb-5">
+                <div class="education-item p-4 border" >
+                    <h3 class="mb-3">CCTV Operation</h3>
+                    <p>My experience with CCTV systems at Anjo World has been extensive and fulfilling. Here are some key highlights:</p>
+                    <ul class="list-unstyled pl-3">
+                        <li class="mb-2">
+                            <i class="fas fa-video mr-2"></i>
+                            <strong>Learned CCTV Application:</strong> Gained comprehensive knowledge of CCTV systems and their applications within the park's infrastructure.
+                        </li>
+                        <li class="mb-2">
+                            <i class="fas fa-tasks mr-2"></i>
+                            <strong>Implemented CCTV Protocols:</strong> Successfully applied CCTV protocols to monitor various sections of the theme park, ensuring the safety and security of guests and staff.
+                        </li>
+                        <li>
+                            <i class="fas fa-tools mr-2"></i>
+                            <strong>Troubleshooting Expertise:</strong> Developed troubleshooting expertise to promptly address any technical issues or anomalies within the CCTV network, ensuring uninterrupted surveillance.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6 mb-5">
+                <div class="education-item p-4 border">
+                    <h3 class="mb-3">Technical Support Proficiency</h3>
+                    <p>Providing technical support at Anjo World allowed me to hone my skills in a dynamic environment. Some key accomplishments include:</p>
+                    <ul class="list-unstyled pl-3">
+                        <li class="mb-2">
+                            <i class="fas fa-headset mr-2"></i>
+                            <strong>Technical Support Skills:</strong> Demonstrated proficiency in providing technical support to park visitors and staff, resolving a wide range of issues related to park facilities and equipment.
+                        </li>
+                        <li class="mb-2">
+                            <i class="fas fa-smile mr-2"></i>
+                            <strong>Customer Satisfaction:</strong> Received positive feedback from patrons and colleagues for delivering prompt and effective technical assistance, enhancing overall customer satisfaction.
+                        </li>
+                        <li>
+                            <i class="fas fa-book-reader mr-2"></i>
+                            <strong>Continuous Learning:</strong> Maintained a proactive approach to learning emerging technologies and solutions, ensuring up-to-date knowledge to address evolving technical challenges.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 mb-5">
+                <div class="education-item p-4 border">
+                    <h3 class="mb-3">Photoshop Skills</h3>
+                    <p>My skills in Adobe Photoshop have been instrumental in creating engaging visual content. Here are some key highlights:</p>
+                    <ul class="list-unstyled pl-3">
+                        <li class="mb-2">
+                            <i class="fas fa-paint-brush mr-2"></i>
+                            <strong>Graphic Design:</strong> Developed and designed graphics for various projects, enhancing the visual appeal and communication of key messages.
+                        </li>
+                        <li class="mb-2">
+                            <i class="fas fa-layer-group mr-2"></i>
+                            <strong>Photo Editing:</strong> Proficient in photo editing techniques, including retouching, color correction, and image manipulation.
+                        </li>
+                        <li>
+                            <i class="fas fa-file-image mr-2"></i>
+                            <strong>Creative Projects:</strong> Successfully completed creative projects that required advanced Photoshop skills, contributing to marketing and promotional efforts.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6 mb-5">
+                <div class="education-item p-4 border">
+                    <h3 class="mb-3">Printer Troubleshooting</h3>
+                    <p>My experience in printer troubleshooting has been significant during my tenure at Anjo World Theme Park. Here are some key accomplishments:</p>
+                    <ul class="list-unstyled pl-3">
+                        <li class="mb-2">
+                            <i class="fas fa-print mr-2"></i>
+                            <strong>Printer Maintenance:</strong> Conducted routine maintenance on printers, ensuring optimal performance and minimizing downtime.
+                        </li>
+                        <li class="mb-2">
+                            <i class="fas fa-exclamation-triangle mr-2"></i>
+                            <strong>Troubleshooting Expertise:</strong> Identified and resolved printer issues promptly, including paper jams, connectivity issues, and print quality problems.
+                        </li>
+                        <li>
+                            <i class="fas fa-wrench mr-2"></i>
+                            <strong>Hardware Repair:</strong> Proficient in diagnosing and repairing printer hardware components, contributing to uninterrupted operation of printing facilities.
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
     </div>
-</section> 
-<section id="Iframe" class="iframe-section">
-  <div class="container">
+</section>
+
+<section id="Images">
+  <div class="container bg-light">
     <div class="row justify-content-center">
-      <div class="col-md-8 text-center">
-        <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSwUMDTzqUgDh4YRm8DlhDBSVSQWhPYeN-oDeVcixA6LUz3-Lmuw6Z2mGptgWoPCgmxrJQ8NcdV6udV/pubhtml?gid=246184847&amp;single=true&amp;widget=true&amp;headers=false" frameborder="2" width="100%" height="400"></iframe>
+      <div class="col-md-12 text-center">
+        <div class="row justify-content-center">
+          <div class="col-md-2 mb-4">
+            <div class="image-container">
+              <img src="img/jay.jpg" alt="Image 1" class="img-fluid rounded shadow">
+              <div class="overlay">
+                <div class="text">CCTV<br>INSTALLATION</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-2 mb-4">
+            <div class="image-container">
+              <img src="img/jay1.jpg" alt="Image 2" class="img-fluid rounded shadow">
+              <div class="overlay">
+                <div class="text">CCTV<br>INSTALLATION</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-2 mb-4">
+            <div class="image-container">
+              <img src="img/jay2.png" alt="Image 3" class="img-fluid rounded shadow">
+              <div class="overlay">
+                <div class="text">LAPTOP<br>TROUBLESHOOTING INTERNAL</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-2 mb-4">
+            <div class="image-container">
+              <img src="img/jay3.jpg" alt="Image 4" class="img-fluid rounded shadow">
+              <div class="overlay">
+                <div class="text">CAR RENTAL<br>Adobe Photoshop</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-2 mb-4">
+            <div class="image-container">
+              <img src="img/jay4.jpg" alt="Image 5" class="img-fluid rounded shadow">
+              <div class="overlay">
+                <div class="text">PRINTER<br>TROUBLESHOOTING INTERNAL</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-2 mb-4">
+            <div class="image-container">
+              <img src="img/jay5.jpg" alt="Image 6" class="img-fluid rounded shadow">
+              <div class="overlay">
+                <div class="text">TROUBLESHOOT<br>Adobe Photoshop</div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
+</section>
+
+<section id="Iframe" class="iframe-section">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-12 text-center">
+          <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSwUMDTzqUgDh4YRm8DlhDBSVSQWhPYeN-oDeVcixA6LUz3-Lmuw6Z2mGptgWoPCgmxrJQ8NcdV6udV/pubhtml?gid=246184847&amp;single=true&amp;widget=true&amp;headers=false" frameborder="5" width="100%" height="400"></iframe>
+        </div>
+      </div>
+    </div>
 </section>
 <section id="Contact" class="contact-section bg-light">
   <div class="container text-center">
@@ -615,8 +665,6 @@
       <button class="btn btn-primary" onclick="composeEmail()">Send Message</button>
   </div>
 </section>
-
-
 <script>
   function composeEmail() {
       var subject = "Hello Francis Jay"; 
