@@ -32,6 +32,15 @@ document.addEventListener('DOMContentLoaded', function () {
           behavior: 'smooth'
         });
       });
+     document.querySelector('a[href="#Certificates"]').addEventListener('click', function (e) {
+        e.preventDefault();
+  
+        const targetSection = document.getElementById('Certificates');
+        targetSection.scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+        
 
 
   });
