@@ -394,6 +394,30 @@
             padding-left: 20px;
             list-style-type: disc;
         }
+        .custom-download-btn {
+    background: rgba(0, 0, 0, 0); /* Fully transparent background */
+    border: 2px solid #28a745; /* Green border */
+    color: #28a745; /* Green text */
+    padding: 10px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 20px auto;
+    cursor: pointer;
+    border-radius: 25px; /* Rounded corners */
+    transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+}
+
+.custom-download-btn:hover {
+    background: rgba(40, 167, 69, 0.1); /* Slightly transparent green background on hover */
+    color: #218838; /* Darker green text on hover */
+    transform: scale(1.05); /* Slightly enlarge the button on hover */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow on hover */
+}
+
+
+
     </style>
 </head>
 <body>
@@ -410,6 +434,7 @@
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
                 <li class="nav-item"><a class="nav-link" href="#Edu">Education</a></li>
+                <li class="nav-item"><a class="nav-link" href="#Certificates">Certificates</a></li>
                 <li class="nav-item"><a class="nav-link" href="#Acco">Accomplishment Report</a></li>
                 <li class="nav-item"><a class="nav-link" href="https://docs.google.com/document/d/1-GPm1oJ3Iwd1BcUXIv4TNKJMrr8KC0ss/edit?usp=sharing&ouid=109295065180999958710&rtpof=true&sd=true" target="_blank">Resume</a></li>
                 <li class="nav-item"><a class="nav-link" href="#Contact">Contact</a></li>
@@ -425,7 +450,7 @@
             <h1 class="display-4 font-weight-bold">Francis Jay Rotol</h1>
             <p class="lead font-italic">IT Specialist | Tech Enthusiast | Success Driven</p>
             <p class="font-italic">"Striving for success in all aspects of life"</p>
-            <a href="https://github.com/jay-rtl/Porfolio-Jay/raw/main/Agenda-of-JUNE-15-2024-graduation-meeting-with-parents.pdf" class="btn btn-primary mt-3" download>Download Resume</a>
+            <a href="https://github.com/jay-rtl/Porfolio-Jay/raw/main/Agenda-of-JUNE-15-2024-graduation-meeting-with-parents.pdf" class="custom-download-btn mt-3" download>Download Resume</a>
         </div>
     </div>
 </section>
