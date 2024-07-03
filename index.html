@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
      <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="icon" href="FR.png" type="image">
     <style>
         body, html {
@@ -381,6 +382,76 @@
     transform: scale(1.05); /* Slightly enlarge the button on hover */
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow on hover */
 }
+        .contact-section {
+    padding: 60px 0;
+    background-color: #f8f9fa;
+}
+
+.contact-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    text-align: center;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    color: #333;
+    position: relative;
+}
+
+.contact-info {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 30px;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.contact-info ul li {
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+}
+
+.contact-info ul li i {
+    margin-right: 10px;
+    color: #007bff;
+}
+
+.contact-info ul li strong {
+    margin-right: 5px;
+}
+
+.contact-info a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 50px;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.shadow-sm {
+    box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075) !important;
+}
+
 
 
 
@@ -668,18 +739,47 @@
       </div>
     </div>
 </section>
-<section id="Contact" class="contact-section bg-light">
-  <div class="container text-center">
-      <h2>Contact Information</h2>
-      <p class="contact-item"><i class="bi bi-envelope-fill"></i> Email: <a href="mailto:rotoljay03@gmail.com">rotoljay03@gmail.com</a></p>
-      <p class="contact-item"><i class="bi bi-phone"></i> Phone: +63 9512352816</p>
-      <p class="contact-item"><i class="bi bi-facebook"></i> Facebook: <a href="https://www.facebook.com/jayrotol05">Francis Jay Rotol</a></p>
-      <p class="contact-item"><i class="bi bi-instagram"></i> Instagram: <a href="https://www.instagram.com/jay.rtl/?fbclid=IwAR2l4fjwL4OFezHjDBk36BAOtStUgDYlruwm8UQhUQTYaaoL4r0PHdeZ1yo">Francis Jay D. Rotol</a></p>
-      <p class="contact-item"><i class="bi bi-whatsapp"></i> WhatsApp: <a href="https://wa.me/your_whatsapp_number">+629512352816</a></p>
-      <p class="contact-item"><i class="bi bi-chat-left-dots"></i> Viber: <a href="viber://chat?number=your_viber_number">+629512352816</a></p>
-      <button class="btn btn-primary" onclick="composeEmail()">Send Message</button>
-  </div>
+<section id="ContactInformation" class="contact-section pt-5 pb-5">
+    <div class="container">
+        <h2 class="text-center mb-5">Contact Information</h2>
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="contact-info p-4 border rounded shadow-sm">
+                    <ul class="list-unstyled">
+                        <li class="mb-3">
+                            <i class="fas fa-envelope"></i> 
+                            <strong>Email:</strong> <a href="mailto:rotoljay03@gmail.com">rotoljay03@gmail.com</a>
+                        </li>
+                        <li class="mb-3">
+                            <i class="fas fa-phone"></i> 
+                            <strong>Phone:</strong> <a href="tel:+639512352816">+63 9512352816</a>
+                        </li>
+                        <li class="mb-3">
+                            <i class="fab fa-facebook"></i> 
+                            <strong>Facebook:</strong> <a href="https://www.facebook.com/rotoljay03">Francis Jay Rotol</a>
+                        </li>
+                        <li class="mb-3">
+                            <i class="fab fa-instagram"></i> 
+                            <strong>Instagram:</strong> <a href="https://www.instagram.com/francisjaydrotol">Francis Jay D. Rotol</a>
+                        </li>
+                        <li class="mb-3">
+                            <i class="fab fa-whatsapp"></i> 
+                            <strong>WhatsApp:</strong> <a href="https://wa.me/639512352816">+629512352816</a>
+                        </li>
+                        <li class="mb-3">
+                            <i class="fab fa-viber"></i> 
+                            <strong>Viber:</strong> <a href="viber://add?number=639512352816">+629512352816</a>
+                        </li>
+                    </ul>
+                    <div class="text-center mt-4">
+                        <a href="mailto:rotoljay03@gmail.com" class="btn btn-primary">Send Message</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
+
 <script>
   function composeEmail() {
       var subject = "Hello Francis Jay"; 
