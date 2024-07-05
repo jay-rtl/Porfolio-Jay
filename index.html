@@ -263,7 +263,22 @@
 .certificate-img-container {
     position: relative;
 }
-.image-container:hover .overlay {
+        .overlay1 {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.image-container:hover .overlay1 {
     opacity: 1;
 }
 .img-fluid {
@@ -683,7 +698,7 @@
           <div class="col-md-2 mb-4">
             <div class="image-container">
               <img src="img/cctv.jpg" alt="Image 1" class="img-fluid rounded shadow">
-              <div class="overlay">
+              <div class="overlay1">
                 <div class="text">CCTV<br>INSTALLATION</div>
               </div>
             </div>
@@ -691,7 +706,7 @@
           <div class="col-md-2 mb-4">
             <div class="image-container">
               <img src="img/jay1.jpg" alt="Image 2" class="img-fluid rounded shadow">
-              <div class="overlay">
+              <div class="overlay1">
                 <div class="text">CCTV<br>INSTALLATION</div>
               </div>
             </div>
@@ -699,7 +714,7 @@
           <div class="col-md-2 mb-4">
             <div class="image-container">
               <img src="img/jay2.png" alt="Image 3" class="img-fluid rounded shadow">
-              <div class="overlay">
+              <div class="overlay1">
                 <div class="text">LAPTOP<br>TROUBLESHOOTING INTERNAL</div>
               </div>
             </div>
@@ -707,7 +722,7 @@
           <div class="col-md-2 mb-4">
             <div class="image-container">
               <img src="img/jay3.jpg" alt="Image 4" class="img-fluid rounded shadow">
-              <div class="overlay">
+              <div class="overlay1">
                 <div class="text">CAR RENTAL<br>Adobe Photoshop</div>
               </div>
             </div>
@@ -715,7 +730,7 @@
           <div class="col-md-2 mb-4">
             <div class="image-container">
               <img src="img/jay4.jpg" alt="Image 5" class="img-fluid rounded shadow">
-              <div class="overlay">
+              <div class="overlay1">
                 <div class="text">PRINTER<br>TROUBLESHOOTING INTERNAL</div>
               </div>
             </div>
@@ -723,7 +738,7 @@
           <div class="col-md-2 mb-4">
             <div class="image-container">
               <img src="img/jay5.jpg" alt="Image 6" class="img-fluid rounded shadow">
-              <div class="overlay">
+              <div class="overlay1">
                 <div class="text">TROUBLESHOOT<br>Adobe Photoshop</div>
               </div>
             </div>
