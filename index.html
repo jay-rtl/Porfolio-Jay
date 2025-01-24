@@ -400,38 +400,31 @@
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow on hover */
 }
        .contact-section {
-    padding: 60px 0;
     background-color: #1f1f1f; /* Deep black background */
     color: white;
-}
-
-.contact-section h2 {
-    font-size: 2.5rem;
-    margin-bottom: 40px;
-    text-align: center;
-    font-family: 'Roboto', Arial, sans-serif;
-    color: white;
-    position: relative;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
 
 .contact-info {
-    background-color: #2a2a2a; /* Darker background for the contact info */
-    border-radius: 8px;
-    padding: 30px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    padding: 10px 0;
 }
 
 .contact-info ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 0;
     margin: 0;
     list-style: none;
 }
 
 .contact-info ul li {
-    font-size: 1.1rem;
+    font-size: 1rem;
     display: flex;
     align-items: center;
-    margin-bottom: 15px;
     color: #ccc; /* Light gray text for contrast */
 }
 
@@ -440,32 +433,26 @@
     color: #1e3a8a; /* Dark blue for icons */
 }
 
-.contact-info ul li strong {
-    margin-right: 5px;
-    color: #1e3a8a; /* Dark blue for labels */
-}
-
-.contact-info a {
+.contact-info ul li a {
     color: #1e3a8a; /* Dark blue for links */
     text-decoration: none;
 }
 
-.contact-info a:hover {
+.contact-info ul li a:hover {
     text-decoration: underline;
 }
 
-.btn-primary {
-    background-color: #1e3a8a; /* Dark blue button */
-    color: #fff;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-weight: bold;
+.contact-info ul li.mx-4 {
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
-.btn-primary:hover {
-    background-color: #163c69; /* Darker blue for hover */
+@media (max-width: 768px) {
+    .contact-info ul li {
+        font-size: 0.9rem;
+        margin-bottom: 5px;
+    }
 }
-
 
        
     </style>
@@ -754,41 +741,37 @@
   </div>
 </section>
 
-<section id="Contact" class="contact-section pt-5 pb-5">
+<section id="Contact" class="contact-section pt-3 pb-3">
     <div class="container">
-        <h2 class="text-center mb-5">Contact Information</h2>
-        <div class="row justify-content-center">
-            <div class="col-md-8">
-                <div class="contact-info p-4 border rounded shadow-sm">
-                    <ul class="list-unstyled">
-                        <li class="mb-3">
+        <div class="row justify-content-center text-center">
+            <div class="col-md-12">
+                <div class="contact-info d-flex justify-content-center align-items-center">
+                    <ul class="list-unstyled d-flex mb-0">
+                        <li class="mx-4">
                             <i class="fas fa-envelope"></i> 
-                            <strong>Email:</strong> <a href="mailto:rotoljay03@gmail.com">rotoljay03@gmail.com</a>
+                            <a href="mailto:rotoljay03@gmail.com">Email</a>
                         </li>
-                        <li class="mb-3">
+                        <li class="mx-4">
                             <i class="fas fa-phone"></i> 
-                            <strong>Phone:</strong> <a href="tel:+639512352816">+63 9512352816</a>
+                            <a href="tel:+639512352816">Phone</a>
                         </li>
-                        <li class="mb-3">
+                        <li class="mx-4">
                             <i class="fab fa-facebook"></i> 
-                            <strong>Facebook:</strong> <a href="https://www.facebook.com/jayrotol05" target="blank">Francis Jay Rotol</a>
+                            <a href="https://www.facebook.com/jayrotol05" target="blank">Facebook</a>
                         </li>
-                        <li class="mb-3">
+                        <li class="mx-4">
                             <i class="fab fa-instagram"></i> 
-                            <strong>Instagram:</strong> <a href="https://www.instagram.com/jay.rtl/" target="blank">Francis Jay D. Rotol</a>
+                            <a href="https://www.instagram.com/jay.rtl/" target="blank">Instagram</a>
                         </li>
-                        <li class="mb-3">
+                        <li class="mx-4">
                             <i class="fab fa-whatsapp"></i> 
-                            <strong>WhatsApp:</strong> <a href="https://wa.me/639512352816">+629512352816</a>
+                            <a href="https://wa.me/639512352816">WhatsApp</a>
                         </li>
-                        <li class="mb-3">
+                        <li class="mx-4">
                             <i class="fab fa-viber"></i> 
-                            <strong>Viber:</strong> <a href="viber://add?number=639512352816">+629512352816</a>
+                            <a href="viber://add?number=639512352816">Viber</a>
                         </li>
                     </ul>
-                    <div class="text-center mt-4">
-                        <a href="javascript:void(0);" class="btn btn-primary" onclick="composeEmail()">Send Message</a>
-                    </div>
                 </div>
             </div>
         </div>
