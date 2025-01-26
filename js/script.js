@@ -16,18 +16,11 @@ document.addEventListener('DOMContentLoaded', function () {
           behavior: 'smooth'
         });
       });
-      document.querySelector('a[href="#Contact"]').addEventListener('click', function (e) {
-        e.preventDefault();
-  
-        const targetSection = document.getElementById('Contact');
-        targetSection.scrollIntoView({
-          behavior: 'smooth'
-        });
-      });
+    
       document.querySelector('a[href="#Skills"]').addEventListener('click', function (e) {
         e.preventDefault();
   
-        const targetSection = document.getElementById('Acco');
+        const targetSection = document.getElementById('Skills');
         targetSection.scrollIntoView({
           behavior: 'smooth'
         });
