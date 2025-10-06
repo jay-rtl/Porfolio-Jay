@@ -10,90 +10,17 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="icon" href="FR.png" type="image">
     <style>
-        body {
-      margin: 0;
-      font-family: "Poppins", sans-serif;
-      background-color: #f8f9fa;
-      color: #333;
-      text-align: center;
-    }
-
-    .container {
-      max-width: 800px;
-      margin: 80px auto;
-      padding: 20px;
-    }
-
-    .profile-img {
-      width: 160px;
-      height: 160px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 4px solid #ddd;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    }
-
-    h1 {
-      font-size: 2rem;
-      margin: 20px 0 10px;
-      color: #222;
-    }
-
-    h2 {
-      font-size: 1.1rem;
-      font-weight: 500;
-      color: #555;
-      margin-bottom: 20px;
-    }
-
-    p {
-      font-size: 1rem;
-      color: #666;
-      margin-bottom: 30px;
-      line-height: 1.6;
-    }
-
-    .buttons {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 15px;
-    }
-
-    .btn {
-      background-color: #fff;
-      border: 2px solid #0078d7;
-      color: #0078d7;
-      padding: 12px 28px;
-      border-radius: 25px;
-      text-decoration: none;
-      font-weight: 600;
-      transition: all 0.3s ease;
-    }
-
-    .btn:hover {
-      background-color: #0078d7;
-      color: #fff;
-      transform: translateY(-2px);
-      box-shadow: 0 4px 10px rgba(0,120,215,0.3);
-    }
-
-    footer {
-      margin-top: 60px;
-      font-size: 0.9rem;
-      color: #888;
-    }
-
-    @media (max-width: 600px) {
-      .profile-img {
-        width: 120px;
-        height: 120px;
-      }
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            font-family: Arial, sans-serif;
+        }
         .image-container {
     width: 100%;
     height: auto;
   }
-        
 
         /* Header */
         header {
@@ -579,24 +506,38 @@
 </head>
 <body>
 
- <div class="container">
-    <img src="jay.jpg" alt="Francis Jay Rotol" class="profile-img">
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+            <img src="img/F.png" alt="logo" class="logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#Edu">Education</a></li>
+                <li class="nav-item"><a class="nav-link" href="#Certificates">Certificates</a></li>
+                <li class="nav-item"><a class="nav-link" href="#Skills">Skills</a></li>
+                
+            </ul>
+        </div>
+    </nav>
+</header>
 
-    <h1>Francis Jay Rotol</h1>
-    <h2>IT Specialist | Tech Enthusiast | Success Driven</h2>
-
-    <p>I’m an IT Specialist passionate about technology and system management. Experienced in CCTV installation, network setup, and IT infrastructure support — driven to provide efficient and reliable tech solutions.</p>
-
-    <div class="buttons">
-      <a href="#resume" class="btn">Resume</a>
-      <a href="#skills" class="btn">Skills</a>
-      <a href="#certificate" class="btn">Certificate</a>
-      <a href="#contact" class="btn">Contact</a>
+<section id="home" style="background-image: url('img/background.jpg');">
+    <div class="content">
+        <div class="container text-center text-white">
+            <img src="img/jay.jpg" alt="Profile Picture" class="profile-pic mb-4">
+            <h1 class="display-4 font-weight-bold">Francis Jay Rotol</h1>
+            <p class="lead font-italic">IT Specialist | Tech Enthusiast | Success Driven</p>
+            <p class="font-italic">"Striving for success in all aspects of life"</p>
+            <a href="https://github.com/jay-rtl/Porfolio-Jay/raw/main/Resume03.pdf" class="custom-download-btn mt-3" download>Download Resume</a>
+        </div>
     </div>
+</section>
 
-    <footer>
-      © 2025 Francis Jay Rotol. All rights reserved.
-    </footer>
 <section id="Edu">
     <div class="container">
         <h2 class="text-center">Education</h2>
@@ -910,6 +851,9 @@
         </div>
     </div>
 </section>
+     <footer>
+      © 2025 Francis Jay Rotol. All rights reserved.
+    </footer>
 
 
 
