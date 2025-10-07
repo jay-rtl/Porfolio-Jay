@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Francis Jay Rotol</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+     <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="icon" href="FR.png" type="image">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            font-family: Arial, sans-serif;
+        }
+        .image-container {
+    width: 100%;
+    height: auto;
+  }
+
+        /* Header */
+        header {
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 10px 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .navbar-brand img.logo {
+            max-height: 40px;
+            margin-left: 10px;
+        }
+
+        .navbar-light .navbar-nav .nav-link {
+            color: #333;
+            font-weight: bold;
+        }
+
+        .navbar-light .navbar-nav .nav-link:hover {
+            color: #18bc9c;
+        }
+
+        /* Home Section */
+        #home {
+            background-image: url('img/spring_break_background.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+            padding: 20px;
+        }
+
+        #home .content {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 30px;
+            border-radius: 10px;
+            max-width: 800px;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        #home .content h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        #home .content p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+
+        #home .content p.font-italic {
+            font-size: 1.1rem;
+            margin-bottom: 0;
+        }
+
+        @media (max-width: 768px) {
+            #home .content h1 {
+                font-size: 2.5rem;
+            }
+
+            #home .content p {
+                font-size: 1rem;
+            }
+
+            #home .content p.font-italic {
+                font-size: 1rem;
+            }
+        }
+.certificate-section {
+    padding: 60px 0;
+    background-color: #f8f9fa;
+}
+
+.certificate-section h2 {
+    font-size: 3rem;
+    margin-bottom: 40px;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    color: #333;
+    position: relative;
+}
+
+.certificate-section h2::before {
+    content: "</>";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -20px;
+    color: #333;
+    font-size: 2rem;
+}
+
+.certificate-item {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.certificate-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.certificate-img-container {
+    position: relative;
+}
+
+.certificate-img-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+}
+
+.certificate-img-container:hover .overlay {
+    opacity: 1;
+}
+
+.overlay .text {
+    color: white;
+    font-size: 20px;
+    text-align: center;
+}
+
+.mb-4 {
+    margin-bottom: 1.5rem;
+}
+
+.rounded {
+    border-radius: 5px;
+}
+
+.shadow {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.container-1 {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.text-white {
+    color: white;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid white;
+}
+
+.mb-4 {
+    margin-bottom: 1.5rem;
+}
+
+.display-4 {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.font-weight-bold {
+    font-weight: 700;
+}
+
+.lead {
+    font-size: 1.25rem;
+    font-weight: 300;
+}
+
+.font-italic {
+    font-style: italic;
+}
+
+#home {
+    background-size: cover;
+    background-position: center;
+    padding: 100px 0;
+}
+
+.content {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+}
+.container-2 {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.mb-5 {
+    margin-bottom: 3rem;
+}
+
+.certificate-item {
+    margin-bottom: 2rem;
+}
+
+.certificate-img-container {
+    position: relative;
+}
+        .overlay1 {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.image-container:hover .overlay1 {
+    opacity: 1;
+}
+.img-fluid {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+}
+
+.certificate-img-container:hover .overlay {
+    opacity: 1;
+}
+
+.text {
+    color: white;
+    font-size: 20px;
+    text-align: center;
+}
+#Edu {
+            padding: 60px 0;
+            background-color: #f8f9fa;
+        }
+
+        #Edu .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        #Edu h2 {
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            text-align: center;
+            color: #333;
+            font-family: 'Courier New', Courier, monospace;
+            position: relative;
+        }
+
+        .education-item {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex-basis: calc(25% - 2rem); /* Adjust based on the desired width */
+    box-sizing: border-box;
+    min-width: 250px;
+}
+
+.education-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 1200px) {
+    .education-item {
+        flex-basis: calc(33.33% - 2rem); /* Adjust for medium screens */
+    }
+}
+
+@media (max-width: 992px) {
+    .education-item {
+        flex-basis: calc(50% - 2rem); /* Adjust for small screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .education-item {
+        flex-basis: 100%; /* Adjust for very small screens */
+    }
+}
+
+
+        .education-desc {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .education-list {
+            padding-left: 20px;
+            list-style-type: disc;
+        }
+        .custom-download-btn {
+    background: rgba(0, 0, 0, 0); /* Fully transparent background */
+    border: 2px solid #28a745; /* Green border */
+    color: #28a745; /* Green text */
+    padding: 10px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 20px auto;
+    cursor: pointer;
+    border-radius: 25px; /* Rounded corners */
+    transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+}
+
+.custom-download-btn:hover {
+    background: rgba(40, 167, 69, 0.1); /* Slightly transparent green background on hover */
+    color: #218838; /* Darker green text on hover */
+    transform: scale(1.05); /* Slightly enlarge the button on hover */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow on hover */
+}
+       .contact-section {
+    background-color: white; /* Deep black background */
+    color: white;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.contact-section {
+    background-color: white; /* Deep black background */
+    color: blue;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.contact-info {
+    padding: 10px 0;
+}
+
+.contact-info ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    flex-wrap: wrap; /* Allow items to wrap to the next line on smaller screens */
+}
+
+.contact-info ul li {
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    color: #ccc; /* Light gray text for contrast */
+}
+
+.contact-info ul li i {
+    margin-right: 10px;
+    color: #1e3a8a; /* Dark blue for icons */
+}
+
+.contact-info ul li a {
+    color: #1e3a8a; /* Dark blue for links */
+    text-decoration: none;
+}
+
+.contact-info ul li a:hover {
+    text-decoration: underline;
+}
+
+.contact-info ul li.mx-4 {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.contact-info ul li.mb-2 {
+    margin-bottom: 10px; /* Add some space between items on mobile */
+}
+
+@media (max-width: 768px) {
+    .contact-info ul {
+        justify-content: flex-start; /* Align items to the left */
+    }
+
+    .contact-info ul li {
+        font-size: 0.9rem; /* Slightly smaller font size */
+        margin-right: 15px;
+        margin-bottom: 8px; /* Space between items when stacked */
+    }
+
+    .contact-info ul li i {
+        font-size: 1.2rem; /* Slightly larger icons for better visibility */
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-section {
+        padding: 15px 0; /* Adjust padding on very small screens */
+    }
+
+    .contact-info ul li {
+        font-size: 0.85rem; /* Further reduce font size on very small screens */
+        margin-right: 10px;
+    }
+
+    .contact-info ul li i {
+        font-size: 1rem; /* Adjust icon size */
+    }
+
+    .contact-info ul {
+        flex-direction: column; /* Stack items vertically on small screens */
+        align-items: center;
+    }
+
+    .contact-info ul li {
+        margin-bottom: 15px; /* More space between items when stacked */
+    }
+}
+
+       
+    </style>
+</head>
+<body>
+
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+            <img src="img/F.png" alt="logo" class="logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#Edu">Education</a></li>
+                <li class="nav-item"><a class="nav-link" href="#Certificates">Certificates</a></li>
+                <li class="nav-item"><a class="nav-link" href="#Skills">Skills</a></li>
+                
+            </ul>
+        </div>
+    </nav>
+</header>
+
+<section id="home" style="background-image: url('img/background.jpg');">
+    <div class="content">
+        <div class="container text-center text-white">
+            <img src="img/jay.jpg" alt="Profile Picture" class="profile-pic mb-4">
+            <h1 class="display-4 font-weight-bold">Francis Jay Rotol</h1>
+            <p class="lead font-italic">IT Specialist | Tech Enthusiast | Success Driven</p>
+            <p class="font-italic">"Striving for success in all aspects of life"</p>
+            <a href="https://github.com/jay-rtl/Porfolio-Jay/raw/main/Resume03.pdf" class="custom-download-btn mt-3" download>Download Resume</a>
+        </div>
+    </div>
+</section>
+
+<section id="Edu">
+    <div class="container">
+        <h2 class="text-center">Education</h2>
+        <div class="d-flex flex-wrap justify-content-between">
+            <div class="education-item flex-fill mx-2 my-3">
+                <h2>Villalimpia Elementary School</h2>
+                <p class="education-desc"><b>Elementary School</b></p>
+                <p>I was a consistent 2nd honor student and consistent best in math awardee.</p>
+            </div>
+            <div class="education-item flex-fill mx-2 my-3" >
+                <h2>Holy Trinity Academy of Loay</h2>
+                <p class="education-desc"><b>Junior and Senior High School</b></p>
+                <p>I was a computer system services awardee in grade 12 and got the best research award with my group.</p>
+            </div>
+            <div class="education-item flex-fill mx-2 my-3">
+                <h2>Center for Industrial Technology and Enterprise (CITE)</h2>
+                <p class="education-desc"><b>Diploma in Computer Engineering Technology</b></p>
+                <ul class="education-list">
+                    <li>Obtained a GWA of 1.55 in the 1st Trimester (June 2022)</li>
+                    <li>CSS NC II Holder (August 2022)</li>
+                    <li>EPAS NC II Holder (September 2022)</li>
+                </ul>
+            </div>
+            
+            <div class="education-item flex-fill mx-2 my-3">
+                <h2>Core Competencies</h2>
+                <p class="education-desc"><b>Computer Engineering Technology</b></p>
+                <ul class="education-list">
+                    <li>Skilled in hardware installation, maintenance, and troubleshooting of computer systems and network devices.</li>
+<li>Experienced in setting up and maintaining local and wide area networks, including configuration using OC300 Omada Controller.</li>
+<li>Knowledgeable in VMware and Fortinet firewall system administration.</li>
+
+<li>Proficient in Microsoft Office applications (Word, Excel, PowerPoint, Publisher) for documentation and reporting.</li>
+
+<li>Hands-on experience in installing and configuring CCTV systems, ITC and SPON speakers, and door access systems.</li>
+
+<li>Capable of performing fiber optic fusion splicing, TDR testing, and port mapping for structured cabling.</li>
+
+<li>Proficient in remote IT support using AnyDesk and VNC.</li>
+
+<li>Basic understanding of Windows Server 2022 setup, Active Directory, and file server implementation.</li>
+
+<li>Familiar with web page design and multimedia applications such as Adobe Photoshop.</li>
+
+<li>Strong technical support skills with a proven ability to resolve IT issues efficiently under pressure.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="Certificates" class="certificate-section pt-5 pb-5">
+    <div class="container">
+        <h2 class="text-center mb-5">Certificates</h2>
+        <div class="row">
+            <div class="col-md-6 mb-5">
+                <div class="certificate-item p-4 border">
+                    <div class="certificate-img-container">
+                        <img src="img/jay6.jpg" alt="Certificate 1" class="img-fluid">
+                        <div class="overlay">
+                            <div class="text">Cisco CCNA7: Switching, Routing, and Wireless Essentials<br>Completed: 29 Oct 2022</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+ <div class="col-md-6 mb-5">
+                <div class="certificate-item p-4 border">
+                    <div class="certificate-img-container">
+                        <img src="img/Comptia.jpg" alt="Certificate 1" class="img-fluid">
+                        <div class="overlay">
+                            <div class="text">Comptia Network<br>Completed: January 2025</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-5">
+                <div class="certificate-item p-4 border">
+                    <div class="certificate-img-container">
+                        <img src="img/COE.jpg" alt="Certificate 1" class="img-fluid">
+                        <div class="overlay">
+                            <div class="text">COE<br>2025</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-5">
+                <div class="certificate-item p-4 border">
+                    <div class="certificate-img-container">
+                        <img src="img/jay7.jpg" alt="Certificate 2" class="img-fluid">
+                        <div class="overlay">
+                            <div class="text">Cisco CCNA7: Enterprise Networking, Security, and Automation<br>Completed: 26 Jan 2023</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-5">
+                <div class="certificate-item p-4 border">
+                    <div class="certificate-img-container">
+                        <img src="img/certi.jpg" alt="Certificate 3" class="img-fluid">
+                        <div class="overlay">
+                            <div class="text">LiLoLeLe Teambuilding at ANJOWORLD<br>Completed: 07 Jun 2024</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-5">
+                <div class="certificate-item p-4 border">
+                    <div class="certificate-img-container">
+                        <img src="img/COC.jpg" alt="Certificate 4" class="img-fluid">
+                        <div class="overlay">
+                            <div class="text">Certificate of Completion <br>Completed: 30 Jun 2024</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section id="Skills" class="pt-5 pb-5">
+    <div class="container">
+        <h2 class="text-center mb-5">Skills and Expertise: Francis Jay D. Rotol</h2>
+        <div class="row">
+            <!-- Technical Support & Troubleshooting -->
+            <div class="col-md-6 mb-5">
+                <div class="education-item p-4 border">
+                    <h3 class="mb-3">Technical Support & Troubleshooting</h3>
+                    <p>Proficient in delivering IT support and troubleshooting across various systems to ensure smooth and reliable operations. My skills include:</p>
+                    <ul class="list-unstyled pl-3">
+                        <li class="mb-2">
+                            <i class="fas fa-headset mr-2"></i>
+                            <strong>IT Support:</strong> Provided technical assistance for theme park operations, supporting both staff and IT infrastructure to maintain system stability.
+                        </li>
+                        <li class="mb-2">
+                            <i class="fas fa-tools mr-2"></i>
+                            <strong>Hardware Troubleshooting:</strong> Diagnosed and repaired computers, network devices, and CCTV systems to minimize downtime and maintain efficiency.
+                        </li>
+                        <li>
+                            <i class="fas fa-cogs mr-2"></i>
+                            <strong>Software & System Maintenance:</strong> Maintained and configured applications like UTAK, Retailware, and FIIX CMMS to ensure optimal performance.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Network & System Administration -->
+            <div class="col-md-6 mb-5">
+                <div class="education-item p-4 border">
+                    <h3 class="mb-3">Network & System Administration</h3>
+                    <p>Experienced in configuring, managing, and maintaining network systems and devices to ensure secure and efficient IT operations. Key skills include:</p>
+                    <ul class="list-unstyled pl-3">
+                        <li class="mb-2">
+                            <i class="fas fa-network-wired mr-2"></i>
+                            <strong>Network Setup & Configuration:</strong> Installed and maintained LAN/WAN networks using OC300 Omada Controller for centralized management.
+                        </li>
+                        <li class="mb-2">
+                            <i class="fas fa-fire mr-2"></i>
+                            <strong>Firewall Configuration:</strong> Configured and maintained Fortinet firewalls to enhance network protection and data security.
+                        </li>
+                        <li>
+                            <i class="fas fa-server mr-2"></i>
+                            <strong>Server & Virtualization:</strong> Managed VMware and Windows Server 2022 operations including Active Directory, file sharing, and system access control.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Website & Infrastructure Management -->
+            <div class="col-md-6 mb-5">
+                <div class="education-item p-4 border">
+                    <h3 class="mb-3">Website & Infrastructure Management</h3>
+                    <p>Skilled in maintaining IT infrastructure, network systems, and software integration to support daily business operations. Some accomplishments include:</p>
+                    <ul class="list-unstyled pl-3">
+                        <li class="mb-2">
+                            <i class="fas fa-desktop mr-2"></i>
+                            <strong>System Administration:</strong> Managed internal systems, back-office software, and network-based platforms ensuring operational reliability.
+                        </li>
+                        <li class="mb-2">
+                            <i class="fas fa-network mr-2"></i>
+                            <strong>Infrastructure Maintenance:</strong> Installed and configured ITC and SPON IP speakers, amplifiers, and related software systems.
+                        </li>
+                        <li>
+                            <i class="fas fa-laptop-code mr-2"></i>
+                            <strong>Remote Support:</strong> Performed system troubleshooting via AnyDesk and VNC, ensuring quick and efficient technical resolutions.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Leadership & Problem-Solving -->
+            <div class="col-md-6 mb-5">
+                <div class="education-item p-4 border">
+                    <h3 class="mb-3">Leadership & Problem-Solving</h3>
+                    <p>Demonstrated leadership and analytical skills through hands-on experience in managing IT projects and solving technical challenges efficiently:</p>
+                    <ul class="list-unstyled pl-3">
+                        <li class="mb-2">
+                            <i class="fas fa-users mr-2"></i>
+                            <strong>Team Leadership:</strong> Served as Lead Man on-site, supervising installations, managing teams, and ensuring project quality.
+                        </li>
+                        <li class="mb-2">
+                            <i class="fas fa-lightbulb mr-2"></i>
+                            <strong>Analytical Thinking:</strong> Applied critical thinking to identify root causes and resolve complex IT and network issues effectively.
+                        </li>
+                        <li>
+                            <i class="fas fa-tasks mr-2"></i>
+                            <strong>Work Under Pressure:</strong> Maintained focus and composure during high-demand operations, ensuring timely and accurate results.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section id="Images">
+  <div class="container bg-light">
+    <div class="row justify-content-center">
+      <div class="col-md-12 text-center">
+        <div class="row justify-content-center">
+          <div class="col-md-2 mb-4">
+            <div class="image-container">
+              <img src="img/cctv.jpg" alt="Image 1" class="img-fluid rounded shadow">
+              <div class="overlay1">
+                <div class="text">CCTV<br>INSTALLATION</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-2 mb-4">
+            <div class="image-container">
+              <img src="img/jay1.jpg" alt="Image 2" class="img-fluid rounded shadow">
+              <div class="overlay1">
+                <div class="text">CCTV<br>INSTALLATION</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-2 mb-4">
+            <div class="image-container">
+              <img src="img/jay2.png" alt="Image 3" class="img-fluid rounded shadow">
+              <div class="overlay1">
+                <div class="text">LAPTOP<br>TROUBLESHOOTING INTERNAL</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-2 mb-4">
+            <div class="image-container">
+              <img src="img/jay3.jpg" alt="Image 4" class="img-fluid rounded shadow">
+              <div class="overlay1">
+                <div class="text">CAR RENTAL<br>Adobe Photoshop</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-2 mb-4">
+            <div class="image-container">
+              <img src="img/jay4.jpg" alt="Image 5" class="img-fluid rounded shadow">
+              <div class="overlay1">
+                <div class="text">PRINTER<br>TROUBLESHOOTING INTERNAL</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-2 mb-4">
+            <div class="image-container">
+              <img src="img/jay5.jpg" alt="Image 6" class="img-fluid rounded shadow">
+              <div class="overlay1">
+                <div class="text">TROUBLESHOOT<br>Adobe Photoshop</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="Contact" class="contact-section pt-3 pb-3">
+    <div class="container">
+        <div class="row justify-content-center text-center">
+            <div class="col-md-12">
+                <div class="contact-info d-flex justify-content-center align-items-center">
+                    <ul class="list-unstyled d-flex flex-wrap justify-content-center mb-0">
+                        <li class="mx-4 mb-2">
+                            <i class="fas fa-envelope"></i> 
+                            <a href="mailto:rotoljay03@gmail.com">Email</a>
+                        </li>
+                        <li class="mx-4 mb-2">
+                            <i class="fas fa-phone"></i> 
+                            <a href="tel:+639512352816">Phone</a>
+                        </li>
+                        <li class="mx-4 mb-2">
+                            <i class="fab fa-facebook"></i> 
+                            <a href="https://www.facebook.com/jayrotol05" target="blank">Facebook</a>
+                        </li>
+                        <li class="mx-4 mb-2">
+                            <i class="fab fa-instagram"></i> 
+                            <a href="https://www.instagram.com/jay.rtl/" target="blank">Instagram</a>
+                        </li>
+                        <li class="mx-4 mb-2">
+                            <i class="fab fa-whatsapp"></i> 
+                            <a href="https://wa.me/639512352816">WhatsApp</a>
+                        </li>
+                        <li class="mx-4 mb-2">
+                            <i class="fab fa-viber"></i> 
+                            <a href="viber://add?number=639512352816">Viber</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+     <footer>
+      © 2025 Francis Jay Rotol. All rights reserved.
+    </footer>
+
+
+
+<script>
+  function composeEmail() {
+      var subject = "Hello Francis Jay"; 
+      var body = "Dear Francis Jay,\n\nI would like to connect with you...";
+      var mailtoLink = "mailto:rotoljay03@gmail.com?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+      window.location.href = mailtoLink;
+  }
+</script>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="js/script.js"></script>
+<script src="js/img.js"></script>
+
+</body>
+</html>
+
+
+
+
+
+
