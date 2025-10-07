@@ -41,18 +41,12 @@ document.addEventListener('DOMContentLoaded', function () {
           behavior: 'smooth'
         });
       });
-            document.querySelector('a[href="#Contact"]').addEventListener('click', function (e) {
-        e.preventDefault();
-  
-        const targetSection = document.getElementById('Contact');
-        targetSection.scrollIntoView({
-          behavior: 'smooth'
-        });
-      });
+       
         
       });
 
  
+
 
 
 
