@@ -41,7 +41,15 @@ document.addEventListener('DOMContentLoaded', function () {
           behavior: 'smooth'
         });
       });
-       
+
+     document.querySelector('a[href="#portfolio"]').addEventListener('click', function (e) {
+        e.preventDefault();
+  
+        const targetSection = document.getElementById('portfolio');
+        targetSection.scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
         
       });
 
