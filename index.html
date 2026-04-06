@@ -1,1021 +1,262 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Francis Jay Rotol | IT Specialist</title>
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
 
-  <!-- Bootstrap -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
-  <link rel="icon" href="FR.png" type="image" />
+<nav class="custom-navbar">
+  <div class="nav-container">
+    
+    <!-- Logo -->
+    <div class="nav-logo">
+      <a href="#">YourLogo</a>
+    </div>
 
-  <!-- Modern Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Menu -->
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Testimonials</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
 
-  <style>
-    :root {
-      --primary: #0f172a;
-      --secondary: #1e3a8a;
-      --accent: #3b82f6;
-      --accent-dark: #2563eb;
-      --light-blue: #dbeafe;
-      --bg: #f8fbff;
-      --bg-soft: #eef6ff;
-      --white: #ffffff;
-      --text: #1e293b;
-      --muted: #64748b;
-      --border: rgba(59, 130, 246, 0.12);
-      --shadow: 0 12px 30px rgba(30, 58, 138, 0.08);
-      --shadow-hover: 0 20px 45px rgba(30, 58, 138, 0.14);
-      --radius: 22px;
+    <!-- Burger -->
+    <div class="menu-toggle" id="menuToggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+  </div>
+</nav>
+
+<style>
+  /* Reset */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  /* Navbar */
+  .custom-navbar {
+    width: 100%;
+    position: relative;
+    z-index: 9999;
+    font-family: 'DM Sans', sans-serif;
+    padding: 8px 20px;
+    background: rgba(8, 20, 45, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 18px;
+    border: 1px solid rgba(120, 180, 255, 0.12);
+    box-shadow: 0 8px 30px rgba(0, 20, 60, 0.25);
+  }
+
+  .nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 48px;
+    position: relative;
+  }
+
+  /* Logo */
+  .nav-logo a {
+    text-decoration: none !important;
+    font-size: 20px;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: 0.3px;
+  }
+
+  /* Desktop Menu */
+  .nav-menu {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav-menu li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav-menu li a {
+    text-decoration: none !important;
+    font-size: 14px;
+    font-weight: 500;
+    color: #d8e8ff;
+    line-height: 1;
+    padding: 4px 0;
+    display: inline-block;
+    transition: all 0.3s ease;
+    border: none !important;
+    box-shadow: none !important;
+  }
+
+  .nav-menu li a:hover {
+    color: #7dc4ff;
+  }
+
+  /* Remove underline from Elementor/theme */
+  .custom-navbar a,
+  .custom-navbar a:hover,
+  .custom-navbar a:focus,
+  .custom-navbar a:active {
+    text-decoration: none !important;
+    border-bottom: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+  }
+
+  .custom-navbar ul,
+  .custom-navbar li {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* Burger Button */
+  .menu-toggle {
+    display: none;
+    width: 42px;
+    height: 42px;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(125, 196, 255, 0.18);
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    z-index: 10001;
+  }
+
+  .menu-toggle:hover {
+    background: rgba(255, 255, 255, 0.10);
+  }
+
+  .menu-toggle span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: #ffffff;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+  }
+
+  /* Mobile */
+  @media (max-width: 768px) {
+    .custom-navbar {
+      padding: 8px 14px;
+      border-radius: 16px;
     }
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+    .nav-logo a {
+      font-size: 18px;
     }
 
-    html {
-      scroll-behavior: smooth;
+    .menu-toggle {
+      display: flex;
     }
 
-    body {
-      font-family: 'Inter', sans-serif;
-      background: linear-gradient(180deg, var(--bg) 0%, var(--bg-soft) 100%);
-      color: var(--text);
-      overflow-x: hidden;
-    }
-
-    section {
-      padding: 90px 0;
-      position: relative;
-    }
-
-    h1, h2, h3, h4, h5 {
-      color: var(--primary);
-      font-weight: 700;
-      letter-spacing: -0.5px;
-    }
-
-    p {
-      color: var(--muted);
-      line-height: 1.7;
-    }
-
-    /* Navbar */
-    header {
-      background: rgba(255, 255, 255, 0.82);
+    .nav-menu {
+      position: absolute;
+      top: calc(100% + 10px);
+      right: 0;
+      width: 220px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0;
+      background: rgba(7, 18, 40, 0.98);
       backdrop-filter: blur(14px);
       -webkit-backdrop-filter: blur(14px);
-      border-bottom: 1px solid rgba(59, 130, 246, 0.08);
-      position: fixed;
-      width: 100%;
-      top: 0;
-      z-index: 1000;
-    }
+      border: 1px solid rgba(125, 196, 255, 0.12);
+      border-radius: 16px;
+      padding: 10px;
+      box-shadow: 0 12px 35px rgba(0, 0, 0, 0.35);
 
-    .navbar {
-      padding: 14px 0;
-    }
-
-    .navbar-brand img {
-      height: 42px;
-    }
-
-    .navbar-light .navbar-nav .nav-link {
-      color: var(--text) !important;
-      font-weight: 600;
-      margin-left: 14px;
-      position: relative;
-      transition: 0.3s ease;
-      font-size: 0.95rem;
-    }
-
-    .navbar-light .navbar-nav .nav-link::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: -4px;
-      width: 0%;
-      height: 2px;
-      background: var(--accent);
-      border-radius: 10px;
-      transition: 0.3s ease;
-    }
-
-    .navbar-light .navbar-nav .nav-link:hover,
-    .navbar-light .navbar-nav .nav-link.active {
-      color: var(--accent) !important;
-    }
-
-    .navbar-light .navbar-nav .nav-link:hover::after,
-    .navbar-light .navbar-nav .nav-link.active::after {
-      width: 100%;
-    }
-
-    .navbar-toggler {
-      border: none;
-      outline: none !important;
-      box-shadow: none !important;
-      padding: 8px 10px;
-      border-radius: 12px;
-      background: rgba(59, 130, 246, 0.08);
-    }
-
-    .navbar-toggler-icon {
-      filter: brightness(0.5);
-    }
-
-    /* Hero */
-    #home {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding-top: 140px;
-      padding-bottom: 80px;
-      overflow: hidden;
-    }
-
-    #home::before {
-      content: "";
-      position: absolute;
-      width: 420px;
-      height: 420px;
-      background: radial-gradient(circle, rgba(59,130,246,0.18) 0%, rgba(59,130,246,0) 70%);
-      top: 70px;
-      left: 50%;
-      transform: translateX(-50%);
-      z-index: 0;
-    }
-
-    #home::after {
-      content: "";
-      position: absolute;
-      width: 260px;
-      height: 260px;
-      background: radial-gradient(circle, rgba(37,99,235,0.12) 0%, rgba(37,99,235,0) 70%);
-      bottom: 40px;
-      right: 10%;
-      z-index: 0;
-    }
-
-    #home .container {
-      position: relative;
-      z-index: 2;
-    }
-
-    .profile-pic {
-      width: 180px;
-      height: 180px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 6px solid rgba(255,255,255,0.95);
-      box-shadow: 0 25px 55px rgba(59, 130, 246, 0.18);
-      margin-bottom: 20px;
-    }
-
-    #home h1 {
-      font-size: 3.2rem;
-      margin-bottom: 12px;
-    }
-
-    .subtitle {
-      font-size: 1.15rem;
-      font-weight: 600;
-      color: var(--secondary);
-      margin-bottom: 10px;
-    }
-
-    .quote {
-      font-size: 1rem;
-      font-style: italic;
-      color: var(--muted);
-      margin-bottom: 32px;
-    }
-
-    .hero-buttons {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 14px;
-    }
-
-    .hero-buttons a {
-      text-decoration: none;
-      padding: 12px 24px;
-      border-radius: 999px;
-      font-weight: 600;
-      transition: 0.3s ease;
-      border: 1px solid transparent;
-      font-size: 0.95rem;
-    }
-
-    .hero-buttons a:first-child {
-      background: var(--accent);
-      color: white;
-      box-shadow: 0 12px 25px rgba(59, 130, 246, 0.22);
-    }
-
-    .hero-buttons a:first-child:hover {
-      transform: translateY(-2px);
-      background: var(--accent-dark);
-      color: white;
-    }
-
-    .hero-buttons a:not(:first-child) {
-      background: rgba(255,255,255,0.9);
-      color: var(--secondary);
-      border: 1px solid rgba(59,130,246,0.12);
-      box-shadow: 0 4px 15px rgba(59,130,246,0.04);
-    }
-
-    .hero-buttons a:not(:first-child):hover {
-      background: var(--light-blue);
-      transform: translateY(-2px);
-      color: var(--secondary);
-    }
-
-    /* Section Titles */
-    section h2 {
-      font-size: 2.2rem;
-      margin-bottom: 14px;
-      text-align: center;
-    }
-
-    .section-subtitle {
-      text-align: center;
-      max-width: 760px;
-      margin: 0 auto 50px;
-      color: var(--muted);
-    }
-
-    /* Shared Cards */
-    .education-item,
-    .card {
-      background: rgba(255,255,255,0.94);
-      border: 1px solid var(--border) !important;
-      border-radius: var(--radius) !important;
-      box-shadow: var(--shadow);
-      transition: all 0.35s ease;
-    }
-
-    .education-item:hover,
-    .card:hover {
-      transform: translateY(-6px);
-      box-shadow: var(--shadow-hover);
-    }
-
-    .education-item {
-      padding: 28px !important;
-      height: 100%;
-    }
-
-    .education-item h3 {
-      font-size: 1.25rem;
-      margin-bottom: 12px;
-    }
-
-    .education-item ul {
-      padding-left: 20px;
-      margin-top: 10px;
-    }
-
-    .education-item li {
-      color: var(--muted);
-      margin-bottom: 8px;
-    }
-
-    /* Section Backgrounds */
-    #Edu,
-    #portfolio {
-      background: transparent !important;
-    }
-
-    #Certificates,
-    #Contact {
-      background: rgba(255, 255, 255, 0.55) !important;
-      backdrop-filter: blur(6px);
-      -webkit-backdrop-filter: blur(6px);
-    }
-
-    /* Certificates */
-    #Certificates img {
-      border-radius: 18px;
-      box-shadow: var(--shadow);
-      transition: 0.3s ease;
-      width: 100%;
-    }
-
-    #Certificates img:hover {
-      transform: scale(1.02);
-    }
-
-    #Certificates p {
-      font-weight: 500;
-      margin-top: 12px;
-    }
-
-    /* Skills */
-    #Skills .education-item {
-      height: 100%;
-    }
-
-    #Skills i {
-      color: var(--accent);
-      min-width: 22px;
-    }
-
-    /* Album */
-    #Album {
-      background: linear-gradient(180deg, #f7fbff 0%, #edf5ff 100%);
-    }
-
-    .album-img-wrapper {
-      position: relative;
-      overflow: hidden;
-      border-radius: 24px;
-      box-shadow: 0 18px 40px rgba(30, 58, 138, 0.14);
-    }
-
-    .album-img {
-      height: 520px;
-      object-fit: cover;
-      transition: transform 0.6s ease;
-      border-radius: 24px;
-    }
-
-    .album-img-wrapper:hover .album-img {
-      transform: scale(1.04);
-    }
-
-    .album-overlay {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      padding: 28px;
-      background: linear-gradient(to top, rgba(15, 23, 42, 0.82), transparent);
-      color: white;
-      text-align: left;
-    }
-
-    .album-overlay h5 {
-      margin: 0;
-      color: white;
-      font-size: 1.25rem;
-      font-weight: 600;
-    }
-
-    .carousel-control-prev-icon,
-    .carousel-control-next-icon {
-      background-color: rgba(15, 23, 42, 0.55);
-      border-radius: 50%;
-      padding: 18px;
-      background-size: 55%;
-    }
-
-    /* Portfolio */
-    #portfolio .card {
-      overflow: hidden;
-      height: 100%;
-    }
-
-    #portfolio .card-img-top {
-      height: 220px;
-      object-fit: cover;
-      border-top-left-radius: 22px;
-      border-top-right-radius: 22px;
-    }
-
-    #portfolio .card-body {
-      padding: 24px;
-    }
-
-    #portfolio .card h5 {
-      font-size: 1.2rem;
-      margin-bottom: 12px;
-    }
-
-    #portfolio .btn-dark {
-      background: var(--accent);
-      border: none;
-      border-radius: 999px;
-      padding: 10px 22px;
-      font-weight: 600;
-      transition: 0.3s ease;
-      box-shadow: 0 8px 18px rgba(59,130,246,0.18);
-    }
-
-    #portfolio .btn-dark:hover {
-      background: var(--accent-dark);
-      transform: translateY(-2px);
-    }
-
-    /* Contact */
-    #Contact .btn {
-      border-radius: 999px;
-      padding: 12px 20px;
-      font-weight: 600;
-      transition: 0.3s ease;
-      min-width: 150px;
-    }
-
-    #Contact .btn:hover {
-      transform: translateY(-2px);
-    }
-
-    /* Scroll Top */
-    #scrollTopBtn {
-      position: fixed;
-      bottom: 25px;
-      right: 25px;
-      display: none;
-      border: none;
-      outline: none;
-      background: var(--accent);
-      color: white;
-      cursor: pointer;
-      padding: 12px 15px;
-      border-radius: 50%;
-      box-shadow: 0 10px 25px rgba(59, 130, 246, 0.25);
-      z-index: 999;
-      transition: 0.3s ease;
-    }
-
-    #scrollTopBtn:hover {
-      background: var(--accent-dark);
-      transform: translateY(-2px);
-    }
-
-    /* Footer */
-    footer {
-      background: rgba(255,255,255,0.9);
-      text-align: center;
-      padding: 24px 15px;
-      color: var(--muted);
-      font-size: 0.95rem;
-      border-top: 1px solid rgba(59, 130, 246, 0.08);
-    }
-
-    footer a {
-      color: var(--accent);
-      text-decoration: none;
-      font-weight: 600;
-    }
-
-    footer a:hover {
-      text-decoration: underline;
-    }
-
-    /* Fade Up Animation */
-    .fade-up {
+      /* hidden by default */
       opacity: 0;
-      transform: translateY(25px);
-      transition: all 0.8s ease;
+      visibility: hidden;
+      transform: translateY(-10px);
+      pointer-events: none;
+      transition: all 0.3s ease;
+      z-index: 10000;
     }
 
-    .fade-up.show {
+    .nav-menu.active {
       opacity: 1;
+      visibility: visible;
       transform: translateY(0);
+      pointer-events: auto;
     }
 
-    /* Responsive */
-    @media (max-width: 991px) {
-      .navbar-collapse {
-        background: rgba(255,255,255,0.96);
-        margin-top: 12px;
-        padding: 14px 18px;
-        border-radius: 18px;
-        box-shadow: var(--shadow);
-      }
-
-      .navbar-light .navbar-nav .nav-link {
-        margin-left: 0;
-        padding: 10px 0;
-      }
-
-      #home h1 {
-        font-size: 2.5rem;
-      }
-
-      .album-img {
-        height: 360px;
-      }
+    .nav-menu li {
+      width: 100%;
     }
 
-    @media (max-width: 767px) {
-      section {
-        padding: 70px 0;
-      }
-
-      #home {
-        padding-top: 120px;
-      }
-
-      #home h1 {
-        font-size: 2rem;
-      }
-
-      .subtitle {
-        font-size: 1rem;
-      }
-
-      .quote {
-        font-size: 0.95rem;
-      }
-
-      .hero-buttons a {
-        width: 100%;
-        max-width: 260px;
-      }
-
-      .profile-pic {
-        width: 145px;
-        height: 145px;
-      }
-
-      .album-img {
-        height: 280px;
-      }
-
-      #portfolio .card-img-top {
-        height: 190px;
-      }
-
-      section h2 {
-        font-size: 1.8rem;
-      }
-
-      #Contact .btn {
-        width: 100%;
-        max-width: 250px;
-      }
+    .nav-menu li a {
+      width: 100%;
+      padding: 12px 14px;
+      font-size: 13px;
+      border-radius: 10px;
+      color: #e5f0ff;
     }
-  </style>
-</head>
 
-<body>
-  <!-- Navbar -->
-  <header>
-    <nav class="navbar navbar-expand-lg navbar-light">
-      <div class="container">
-        <a class="navbar-brand" href="#home">
-          <img src="img/F.png" alt="logo" />
-        </a>
+    .nav-menu li a:hover {
+      background: rgba(125, 196, 255, 0.08);
+      color: #7dc4ff;
+    }
 
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
+    /* Burger animation */
+    .menu-toggle.active span:nth-child(1) {
+      transform: translateY(7px) rotate(45deg);
+    }
 
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="#Edu">Education</a></li>
-            <li class="nav-item"><a class="nav-link" href="#Skills">Skills</a></li>
-            <li class="nav-item"><a class="nav-link" href="#Certificates">Certificates</a></li>
-            <li class="nav-item"><a class="nav-link" href="#Album">Projects</a></li>
-            <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
-            <li class="nav-item"><a class="nav-link" href="#Contact">Contact</a></li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-  </header>
+    .menu-toggle.active span:nth-child(2) {
+      opacity: 0;
+    }
 
-  <!-- Hero Section -->
-  <section id="home">
-    <div class="container fade-up">
-      <img src="img/jay.jpg" alt="Profile Picture" class="profile-pic" />
-      <h1>Francis Jay Rotol</h1>
-      <p class="subtitle">IT Specialist • Website Developer • Network Administrator</p>
-      <p class="quote">"Striving for success in all aspects of life"</p>
+    .menu-toggle.active span:nth-child(3) {
+      transform: translateY(-7px) rotate(-45deg);
+    }
+  }
+</style>
 
-      <div class="hero-buttons">
-        <a href="https://github.com/jay-rtl/Porfolio-Jay/raw/main/Resume03.pdf" target="_blank">Resume</a>
-        <a href="#Skills">Skills</a>
-        <a href="#Certificates">Certificates</a>
-        <a href="#portfolio">Portfolio</a>
-        <a href="#Contact">Contact</a>
-      </div>
-    </div>
-  </section>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const toggle = document.getElementById("menuToggle");
+    const menu = document.getElementById("navMenu");
 
-  <!-- Education Section -->
-  <section id="Edu">
-    <div class="container">
-      <h2 class="fade-up">Education</h2>
-      <p class="section-subtitle fade-up">My academic foundation and certifications that shaped my technical and professional growth in IT and engineering.</p>
-
-      <div class="row">
-        <div class="col-md-4 mb-4 fade-up">
-          <div class="education-item">
-            <h3>Villalimpia Elementary School</h3>
-            <p><strong>Elementary School</strong></p>
-            <p>Consistent 2nd honor student and Best in Math awardee.</p>
-          </div>
-        </div>
-
-        <div class="col-md-4 mb-4 fade-up">
-          <div class="education-item">
-            <h3>Holy Trinity Academy of Loay</h3>
-            <p><strong>Junior & Senior High School</strong></p>
-            <p>Awarded Computer System Services (CSS NC II) and Best Research Award.</p>
-          </div>
-        </div>
-
-        <div class="col-md-4 mb-4 fade-up">
-          <div class="education-item">
-            <h3>Center for Industrial Technology and Enterprise (CITE)</h3>
-            <p><strong>Diploma in Computer Engineering Technology</strong></p>
-            <ul>
-              <li>GWA 1.55 (1st Trimester 2022)</li>
-              <li>CSS NC II – Aug 2022</li>
-              <li>EPAS NC II – Sept 2022</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Certificates Section -->
-  <section id="Certificates">
-    <div class="container">
-      <h2 class="fade-up">Certificates</h2>
-      <p class="section-subtitle fade-up">Recognitions and technical certifications that validate my knowledge in networking, systems, and professional IT work.</p>
-
-      <div class="row">
-        <div class="col-md-6 mb-4 fade-up">
-          <img src="img/jay6.jpg" alt="Cisco CCNA7" class="img-fluid" />
-          <p class="text-center">Cisco CCNA7: Switching, Routing & Wireless Essentials (Oct 2022)</p>
-        </div>
-        <div class="col-md-6 mb-4 fade-up">
-          <img src="img/Comptia.jpg" alt="Comptia" class="img-fluid" />
-          <p class="text-center">CompTIA Network+ (Jan 2025)</p>
-        </div>
-        <div class="col-md-6 mb-4 fade-up">
-          <img src="img/COE.jpg" alt="COE" class="img-fluid" />
-          <p class="text-center">Certificate of Employment (2025)</p>
-        </div>
-        <div class="col-md-6 mb-4 fade-up">
-          <img src="img/jay7.jpg" alt="CCNA EN" class="img-fluid" />
-          <p class="text-center">Cisco CCNA7: Enterprise Networking, Security & Automation (Jan 2023)</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Skills Section -->
-  <section id="Skills">
-    <div class="container">
-      <h2 class="fade-up">Skills & Expertise</h2>
-      <p class="section-subtitle fade-up">A balanced combination of technical support, network administration, infrastructure management, and leadership in real-world IT environments.</p>
-
-      <div class="row">
-        <div class="col-md-6 mb-4 fade-up">
-          <div class="education-item">
-            <h3 class="mb-3">Technical Support & Troubleshooting</h3>
-            <p>Proficient in delivering IT support and troubleshooting across various systems to ensure smooth and reliable operations.</p>
-            <ul class="list-unstyled pl-3 mt-3">
-              <li class="mb-3">
-                <i class="fas fa-headset mr-2"></i>
-                <strong>IT Support:</strong> Provided technical assistance for theme park operations, supporting staff and infrastructure.
-              </li>
-              <li class="mb-3">
-                <i class="fas fa-tools mr-2"></i>
-                <strong>Hardware Troubleshooting:</strong> Diagnosed and repaired computers, network devices, and CCTV systems.
-              </li>
-              <li>
-                <i class="fas fa-cogs mr-2"></i>
-                <strong>Software Maintenance:</strong> Maintained UTAK, Retailware, and FIIX CMMS systems for stable performance.
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="col-md-6 mb-4 fade-up">
-          <div class="education-item">
-            <h3 class="mb-3">Network & System Administration</h3>
-            <p>Experienced in configuring, managing, and maintaining network systems and devices for secure and efficient operations.</p>
-            <ul class="list-unstyled pl-3 mt-3">
-              <li class="mb-3">
-                <i class="fas fa-network-wired mr-2"></i>
-                <strong>Network Setup:</strong> Installed and maintained LAN/WAN networks using OC300 Omada Controller.
-              </li>
-              <li class="mb-3">
-                <i class="fas fa-fire mr-2"></i>
-                <strong>Firewall Configuration:</strong> Configured and maintained Fortinet firewalls for network security.
-              </li>
-              <li>
-                <i class="fas fa-server mr-2"></i>
-                <strong>Server & Virtualization:</strong> Managed VMware and Windows Server 2022, including AD and file sharing.
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="col-md-6 mb-4 fade-up">
-          <div class="education-item">
-            <h3 class="mb-3">Website & Infrastructure Management</h3>
-            <p>Skilled in maintaining IT infrastructure, network systems, and software integration to support daily business operations.</p>
-            <ul class="list-unstyled pl-3 mt-3">
-              <li class="mb-3">
-                <i class="fas fa-desktop mr-2"></i>
-                <strong>System Administration:</strong> Managed internal systems, back-office software, and network-based platforms.
-              </li>
-              <li class="mb-3">
-                <i class="fas fa-network-wired mr-2"></i>
-                <strong>Infrastructure Maintenance:</strong> Installed and configured ITC and SPON IP speakers and amplifiers.
-              </li>
-              <li>
-                <i class="fas fa-laptop-code mr-2"></i>
-                <strong>Remote Support:</strong> Performed troubleshooting via AnyDesk and VNC for fast issue resolution.
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="col-md-6 mb-4 fade-up">
-          <div class="education-item">
-            <h3 class="mb-3">Leadership & Problem-Solving</h3>
-            <p>Demonstrated leadership and analytical thinking through hands-on project execution and technical issue resolution.</p>
-            <ul class="list-unstyled pl-3 mt-3">
-              <li class="mb-3">
-                <i class="fas fa-users mr-2"></i>
-                <strong>Team Leadership:</strong> Served as Lead Man on-site, supervising installations and project quality.
-              </li>
-              <li class="mb-3">
-                <i class="fas fa-lightbulb mr-2"></i>
-                <strong>Analytical Thinking:</strong> Identified root causes and resolved complex IT and network issues efficiently.
-              </li>
-              <li>
-                <i class="fas fa-tasks mr-2"></i>
-                <strong>Work Under Pressure:</strong> Maintained focus and accuracy during high-demand operational periods.
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Project Album Section -->
-  <section id="Album">
-    <div class="container text-center">
-      <h2 class="fade-up">Project Album</h2>
-      <p class="section-subtitle fade-up">A visual showcase of my hands-on work in CCTV systems, structured cabling, maintenance, and on-site technical support.</p>
-
-      <div id="albumCarousel" class="carousel slide carousel-fade fade-up" data-ride="carousel">
-        <div class="carousel-inner">
-
-          <div class="carousel-item active">
-            <div class="album-img-wrapper">
-              <img src="img/jay1.jpg" class="d-block w-100 album-img" alt="CCTV Installation">
-              <div class="album-overlay">
-                <h5>CCTV Installation</h5>
-              </div>
-            </div>
-          </div>
-
-          <div class="carousel-item">
-            <div class="album-img-wrapper">
-              <img src="img/francis3.jpg" class="d-block w-100 album-img" alt="Network Setup">
-              <div class="album-overlay">
-                <h5>Network Setup</h5>
-              </div>
-            </div>
-          </div>
-
-          <div class="carousel-item">
-            <div class="album-img-wrapper">
-              <img src="img/francis2.jpg" class="d-block w-100 album-img" alt="CCTV System">
-              <div class="album-overlay">
-                <h5>CCTV System</h5>
-              </div>
-            </div>
-          </div>
-
-          <div class="carousel-item">
-            <div class="album-img-wrapper">
-              <img src="img/francis4.jpg" class="d-block w-100 album-img" alt="Structured Cabling">
-              <div class="album-overlay">
-                <h5>Structured Cabling</h5>
-              </div>
-            </div>
-          </div>
-
-          <div class="carousel-item">
-            <div class="album-img-wrapper">
-              <img src="img/francis5.png" class="d-block w-100 album-img" alt="System Maintenance">
-              <div class="album-overlay">
-                <h5>System Maintenance</h5>
-              </div>
-            </div>
-          </div>
-
-          <div class="carousel-item">
-            <div class="album-img-wrapper">
-              <img src="img/francis1.jpg" class="d-block w-100 album-img" alt="On-site Support">
-              <div class="album-overlay">
-                <h5>CCTV Monitoring & Troubleshooting</h5>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <a class="carousel-control-prev" href="#albumCarousel" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        </a>
-        <a class="carousel-control-next" href="#albumCarousel" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Website Portfolio Section -->
-  <section id="portfolio">
-    <div class="container">
-      <h2 class="fade-up">Website Development Portfolio</h2>
-      <p class="section-subtitle fade-up">
-        Selected websites I designed and developed, including author platforms, book promotion pages, wellness sites, and business websites.
-      </p>
-
-      <div class="row">
-
-        <div class="col-md-4 mb-4 fade-up">
-          <div class="card shadow-sm border-0 h-100">
-            <img src="img/site4.png" class="card-img-top" alt="Louis Tabor Website">
-            <div class="card-body text-center">
-              <h5>Louis Tabor</h5>
-              <p>Author website designed to showcase biography, books, and reader engagement.</p>
-              <a href="https://louistabor.com/" target="_blank" class="btn btn-dark">Visit Website</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-4 mb-4 fade-up">
-          <div class="card shadow-sm border-0 h-100">
-            <img src="img/site5.png" class="card-img-top" alt="Ron Harvey Website">
-            <div class="card-body text-center">
-              <h5>Ron Harvey</h5>
-              <p>Book promotion website featuring media content, videos, and author biography.</p>
-              <a href="https://shortstoriestoamuse.com/" target="_blank" class="btn btn-dark">Visit Website</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-4 mb-4 fade-up">
-          <div class="card shadow-sm border-0 h-100">
-            <img src="img/site8.png" class="card-img-top" alt="Pamela Harman Daugavietis Website">
-            <div class="card-body text-center">
-              <h5>Pamela Harman Daugavietis</h5>
-              <p>Author website designed for book promotion and biography presentation.</p>
-              <a href="https://pameladaugavietis.com/" target="_blank" class="btn btn-dark">Visit Website</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-4 mb-4 fade-up">
-          <div class="card shadow-sm border-0 h-100">
-            <img src="img/site7.png" class="card-img-top" alt="Jean Pupeter Website">
-            <div class="card-body text-center">
-              <h5>Jean Pupeter</h5>
-              <p>Book landing page promoting "All The Presidents' Dates".</p>
-              <a href="https://jeanpupeter.com/" target="_blank" class="btn btn-dark">Visit Website</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-4 mb-4 fade-up">
-          <div class="card shadow-sm border-0 h-100">
-            <img src="img/site3.png" class="card-img-top" alt="BluHouse Advertising Website">
-            <div class="card-body text-center">
-              <h5>BluHouse Advertising</h5>
-              <p>Marketing and advertising agency website focused on business campaign services.</p>
-              <a href="https://bluhouseadvertising.com/" target="_blank" class="btn btn-dark">Visit Website</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-4 mb-4 fade-up">
-          <div class="card shadow-sm border-0 h-100">
-            <img src="img/site6.png" class="card-img-top" alt="Mariita Cuervo Website">
-            <div class="card-body text-center">
-              <h5>Mariita C. Cuervo</h5>
-              <p>Wellness website designed to promote therapy services and online consultation booking.</p>
-              <a href="https://mariitacuervo.com/" target="_blank" class="btn btn-dark">Visit Website</a>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact Section -->
-  <section id="Contact">
-    <div class="container text-center">
-      <h2 class="fade-up">Contact Me</h2>
-      <p class="section-subtitle fade-up">Feel free to reach out for IT support, website development, networking projects, or collaboration opportunities.</p>
-
-      <div class="d-flex justify-content-center flex-wrap fade-up">
-        <a href="mailto:rotoljay03@gmail.com" class="btn btn-outline-primary m-2">
-          <i class="fas fa-envelope mr-2"></i>Email
-        </a>
-        <a href="tel:+639615939457" class="btn btn-outline-primary m-2">
-          <i class="fas fa-phone mr-2"></i>Call
-        </a>
-        <a href="https://www.facebook.com/jayrotol05" target="_blank" class="btn btn-outline-primary m-2">
-          <i class="fab fa-facebook-f mr-2"></i>Facebook
-        </a>
-        <a href="https://www.instagram.com/jay.rtll/" target="_blank" class="btn btn-outline-primary m-2">
-          <i class="fab fa-instagram mr-2"></i>Instagram
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Scroll-to-Top Button -->
-  <button id="scrollTopBtn" title="Go to top">
-    <i class="fas fa-chevron-up"></i>
-  </button>
-
-  <!-- Footer -->
-  <footer>
-    © 2025 Francis Jay Rotol. All rights reserved. |
-    <a href="https://jay-rtl.github.io/Porfolio-Jay/#contact" target="_blank">View My GitHub</a>
-  </footer>
-
-  <!-- Scripts -->
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
-  <script>
-    // Scroll to top button
-    const scrollBtn = document.getElementById("scrollTopBtn");
-    window.onscroll = function () {
-      scrollBtn.style.display =
-        document.documentElement.scrollTop > 200 ? "block" : "none";
-    };
-
-    scrollBtn.addEventListener("click", () =>
-      window.scrollTo({ top: 0, behavior: "smooth" })
-    );
-
-    // Fade up on scroll
-    const faders = document.querySelectorAll('.fade-up');
-
-    const appearOptions = {
-      threshold: 0.15
-    };
-
-    const appearOnScroll = new IntersectionObserver(function(entries, observer) {
-      entries.forEach(entry => {
-        if (!entry.isIntersecting) return;
-        entry.target.classList.add('show');
-        observer.unobserve(entry.target);
+    if (toggle && menu) {
+      toggle.addEventListener("click", function () {
+        menu.classList.toggle("active");
+        toggle.classList.toggle("active");
       });
-    }, appearOptions);
 
-    faders.forEach(fader => {
-      appearOnScroll.observe(fader);
-    });
+      // Close menu when clicking a link (mobile)
+      const links = menu.querySelectorAll("a");
+      links.forEach(link => {
+        link.addEventListener("click", function () {
+          menu.classList.remove("active");
+          toggle.classList.remove("active");
+        });
+      });
 
-    // Auto update active nav link on scroll
-    const sections = document.querySelectorAll("section");
-    const navLinks = document.querySelectorAll(".nav-link");
-
-    window.addEventListener("scroll", () => {
-      let current = "";
-      sections.forEach(section => {
-        const sectionTop = section.offsetTop - 140;
-        const sectionHeight = section.clientHeight;
-        if (pageYOffset >= sectionTop) {
-          current = section.getAttribute("id");
+      // Close when clicking outside
+      document.addEventListener("click", function (e) {
+        if (!toggle.contains(e.target) && !menu.contains(e.target)) {
+          menu.classList.remove("active");
+          toggle.classList.remove("active");
         }
       });
-
-      navLinks.forEach(link => {
-        link.classList.remove("active");
-        if (link.getAttribute("href") === "#" + current) {
-          link.classList.add("active");
-        }
-      });
-    });
-  </script>
-</body>
-</html>
+    }
+  });
+</script>
