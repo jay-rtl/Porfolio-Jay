@@ -637,6 +637,61 @@
         width: 100%;
         max-width: 250px;
       }
+      /* Testimonials - Apple Style */
+.testimonial-card {
+  border-radius: 28px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(147,197,253,0.18);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  box-shadow: 0 20px 60px rgba(2, 6, 23, 0.45);
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.testimonial-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, rgba(59,130,246,0.15), transparent, rgba(96,165,250,0.12));
+  opacity: 0;
+  transition: 0.4s ease;
+}
+
+.testimonial-card:hover::before {
+  opacity: 1;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-10px) scale(1.01);
+  box-shadow: 0 30px 80px rgba(37,99,235,0.35);
+}
+
+/* Featured (Apple highlight) */
+.testimonial-card.featured {
+  background: linear-gradient(135deg, rgba(59,130,246,0.18), rgba(15,23,42,0.85));
+  border: 1px solid rgba(96,165,250,0.35);
+  box-shadow: 0 30px 90px rgba(37,99,235,0.45);
+}
+
+.testimonial-card.featured h5 {
+  background: linear-gradient(90deg, #60a5fa, #93c5fd);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Typography polish */
+#Testimonials p {
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: #cbd5e1;
+}
+
+#Testimonials h6,
+#Testimonials small {
+  color: #93c5fd;
+}
     }
   </style>
 </head>
@@ -969,6 +1024,70 @@
       </div>
     </div>
   </section>
+
+  <!-- Testimonials Section (Apple Style) -->
+<section id="Testimonials" class="section-dark">
+  <div class="container text-center">
+    <h2 class="fade-up">What Clients Say</h2>
+    <p class="section-subtitle fade-up">
+      Real feedback from clients I’ve worked with — built on trust, clarity, and results.
+    </p>
+
+    <div class="row justify-content-center">
+
+      <!-- Featured Testimonial -->
+      <div class="col-lg-8 mb-4 fade-up">
+        <div class="testimonial-card featured p-5 text-left">
+          <p class="mb-3">
+            “I just have to say this to you directly… I’m honestly amazed.
+            You didn’t just build me a website, you understood me.
+            The vision, the feeling, the identity—I couldn’t even explain it properly,
+            yet you brought it to life.”
+          </p>
+
+          <p class="mb-3">
+            “Every detail feels intentional. Clean. Powerful. Elevated.
+            It’s not just beautiful—it feels like my brand.”
+          </p>
+
+          <p class="mb-3">
+            “No confusion. No stress. Just clarity and results.
+            You don’t just design—you see the bigger picture.”
+          </p>
+
+          <p class="mb-4">
+            “This wasn’t just a website for me. This was a level-up.”
+          </p>
+
+          <h5 class="mb-0">— Margarita Grigoryan</h5>
+          <small>Owner, MG Transformation</small>
+        </div>
+      </div>
+
+      <!-- Testimonial 2 -->
+      <div class="col-md-4 mb-4 fade-up">
+        <div class="testimonial-card p-4">
+          <p>
+            “Smooth process from start to finish. Clean design, strong communication,
+            and very professional overall.”
+          </p>
+          <h6 class="mt-3 mb-0">— Coaching Client</h6>
+        </div>
+      </div>
+
+      <!-- Testimonial 3 -->
+      <div class="col-md-4 mb-4 fade-up">
+        <div class="testimonial-card p-4">
+          <p>
+            “Fast delivery and reliable execution. The final website exceeded expectations.”
+          </p>
+          <h6 class="mt-3 mb-0">— Business Owner</h6>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
 
   <!-- Contact Section -->
   <section id="Contact" class="section-dark">
