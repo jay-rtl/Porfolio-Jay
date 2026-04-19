@@ -1,1191 +1,563 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Francis Jay Rotol | IT Specialist</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> Jay Rotol | High-Performance Web & IT Systems</title>
 
-  <!-- Bootstrap -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
-  <link rel="icon" href="FR.png" type="image/png" />
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
-  <!-- Modern Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
-  <style>
-    :root {
-      --navy-1: #061120;
-      --navy-2: #0a1930;
-      --navy-3: #10284b;
-      --blue-1: #1d4ed8;
-      --blue-2: #3b82f6;
-      --blue-3: #60a5fa;
-      --cyan-glow: rgba(96, 165, 250, 0.22);
-      --white: #ffffff;
-      --soft-white: #f8fbff;
-      --text-dark: #0f172a;
-      --text-light: #dbeafe;
-      --muted-dark: #475569;
-      --muted-light: #94a3b8;
-      --border-light: rgba(255, 255, 255, 0.12);
-      --border-dark: rgba(37, 99, 235, 0.12);
-      --shadow-dark: 0 18px 40px rgba(2, 6, 23, 0.35);
-      --shadow-light: 0 16px 35px rgba(15, 23, 42, 0.08);
-      --radius: 24px;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
+<style>
+body{
     html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: 'Inter', sans-serif;
-      background:
-        radial-gradient(circle at top left, rgba(59,130,246,0.08), transparent 28%),
-        radial-gradient(circle at bottom right, rgba(96,165,250,0.07), transparent 25%),
-        #050b16;
-      color: var(--text-dark);
-      overflow-x: hidden;
-    }
-
-    h1, h2, h3, h4, h5 {
-      font-weight: 800;
-      letter-spacing: -0.03em;
-    }
-
-    p {
-      line-height: 1.75;
-      margin-bottom: 0;
-    }
-
-    section {
-      padding: 95px 0;
-      position: relative;
-      overflow: hidden;
-    }
-
-    section::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background-image:
-        linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
-      background-size: 32px 32px;
-      opacity: 0.18;
-      pointer-events: none;
-    }
-
-    .section-dark {
-      background:
-        radial-gradient(circle at 15% 20%, rgba(59,130,246,0.14), transparent 22%),
-        radial-gradient(circle at 85% 80%, rgba(96,165,250,0.10), transparent 20%),
-        linear-gradient(135deg, var(--navy-1), var(--navy-2) 45%, var(--navy-3));
-      color: var(--text-light);
-    }
-
-    .section-light {
-      background:
-        radial-gradient(circle at top right, rgba(59,130,246,0.08), transparent 25%),
-        linear-gradient(180deg, #ffffff 0%, #f4f9ff 100%);
-      color: var(--text-dark);
-    }
-
-    .section-dark h1,
-    .section-dark h2,
-    .section-dark h3,
-    .section-dark h4,
-    .section-dark h5 {
-      color: #ffffff;
-    }
-
-    .section-light h1,
-    .section-light h2,
-    .section-light h3,
-    .section-light h4,
-    .section-light h5 {
-      color: var(--text-dark);
-    }
-
-    .section-dark p,
-    .section-dark li,
-    .section-dark .section-subtitle {
-      color: var(--muted-light);
-    }
-
-    .section-light p,
-    .section-light li,
-    .section-light .section-subtitle {
-      color: var(--muted-dark);
-    }
-
-    header {
-      background: rgba(5, 11, 22, 0.72);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      border-bottom: 1px solid rgba(96, 165, 250, 0.12);
-      position: fixed;
-      width: 100%;
-      top: 0;
-      z-index: 1000;
-    }
-
-    .navbar {
-      padding: 14px 0;
-    }
-
-    .navbar-brand img {
-      height: 42px;
-    }
-
-    .navbar-light .navbar-nav .nav-link {
-      color: #dbeafe !important;
-      font-weight: 600;
-      margin-left: 14px;
-      position: relative;
-      transition: 0.3s ease;
-      font-size: 0.95rem;
-    }
-
-    .navbar-light .navbar-nav .nav-link::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: -5px;
-      width: 0%;
-      height: 2px;
-      background: linear-gradient(90deg, var(--blue-2), #93c5fd);
-      border-radius: 10px;
-      transition: 0.3s ease;
-      box-shadow: 0 0 12px rgba(96,165,250,0.5);
-    }
-
-    .navbar-light .navbar-nav .nav-link:hover,
-    .navbar-light .navbar-nav .nav-link.active {
-      color: #ffffff !important;
-    }
-
-    .navbar-light .navbar-nav .nav-link:hover::after,
-    .navbar-light .navbar-nav .nav-link.active::after {
-      width: 100%;
-    }
-
-    .navbar-toggler {
-      border: none;
-      outline: none !important;
-      box-shadow: none !important;
-      padding: 8px 10px;
-      border-radius: 12px;
-      background: rgba(59, 130, 246, 0.12);
-    }
-
-    .navbar-toggler-icon {
-      filter: brightness(4);
-    }
-
-    #home {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding-top: 140px;
-      padding-bottom: 80px;
-      background:
-        radial-gradient(circle at 50% 20%, rgba(96,165,250,0.18), transparent 24%),
-        radial-gradient(circle at 80% 80%, rgba(59,130,246,0.10), transparent 20%),
-        linear-gradient(180deg, #050b16 0%, #081325 45%, #0b1b35 100%);
-      color: white;
-    }
-
-    #home::before {
-      content: "";
-      position: absolute;
-      width: 460px;
-      height: 460px;
-      background: radial-gradient(circle, rgba(59,130,246,0.22) 0%, rgba(59,130,246,0) 70%);
-      top: 40px;
-      left: 50%;
-      transform: translateX(-50%);
-      z-index: 0;
-      filter: blur(8px);
-    }
-
-    #home::after {
-      content: "";
-      position: absolute;
-      inset: auto auto 12% 8%;
-      width: 240px;
-      height: 240px;
-      border-radius: 50%;
-      background: radial-gradient(circle, rgba(147,197,253,0.13), transparent 65%);
-      z-index: 0;
-    }
-
-    #home .container {
-      position: relative;
-      z-index: 2;
-    }
-
-    .profile-pic {
-      width: 185px;
-      height: 185px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 4px solid rgba(255,255,255,0.18);
-      box-shadow:
-        0 0 0 10px rgba(59,130,246,0.07),
-        0 25px 60px rgba(59,130,246,0.22);
-      margin-bottom: 22px;
-    }
-
-    #home h1 {
-      font-size: 3.3rem;
-      margin-bottom: 12px;
-      color: #ffffff;
-    }
-
-    .subtitle {
-      font-size: 1.15rem;
-      font-weight: 600;
-      color: #93c5fd;
-      margin-bottom: 10px;
-    }
-
-    .quote {
-      font-size: 1rem;
-      font-style: italic;
-      color: #cbd5e1;
-      margin-bottom: 34px;
-    }
-
-    .hero-buttons {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 14px;
-    }
-
-    .hero-buttons a {
-      text-decoration: none;
-      padding: 12px 24px;
-      border-radius: 999px;
-      font-weight: 600;
-      transition: all 0.3s ease;
-      border: 1px solid transparent;
-      font-size: 0.95rem;
-    }
-
-    .hero-buttons a:first-child {
-      background: linear-gradient(135deg, var(--blue-2), var(--blue-1));
-      color: white;
-      box-shadow: 0 12px 30px rgba(37, 99, 235, 0.28);
-    }
-
-    .hero-buttons a:first-child:hover {
-      transform: translateY(-3px);
-      color: white;
-      box-shadow: 0 16px 36px rgba(37, 99, 235, 0.35);
-    }
-
-    .hero-buttons a:not(:first-child) {
-      background: rgba(255,255,255,0.06);
-      color: #dbeafe;
-      border: 1px solid rgba(147,197,253,0.18);
-      backdrop-filter: blur(10px);
-    }
-
-    .hero-buttons a:not(:first-child):hover {
-      background: rgba(96,165,250,0.12);
-      color: white;
-      transform: translateY(-3px);
-      box-shadow: 0 10px 25px rgba(59,130,246,0.16);
-    }
-
-    section h2 {
-      font-size: 2.35rem;
-      margin-bottom: 14px;
-      text-align: center;
-    }
-
-    .section-subtitle {
-      text-align: center;
-      max-width: 760px;
-      margin: 0 auto 50px;
-    }
-
-    .education-item,
-    .card {
-      border-radius: var(--radius) !important;
-      transition: all 0.35s ease;
-      overflow: hidden;
-      position: relative;
-    }
-
-    .section-dark .education-item,
-    .section-dark .card {
-      background: rgba(255,255,255,0.06);
-      border: 1px solid var(--border-light) !important;
-      box-shadow: var(--shadow-dark);
-      backdrop-filter: blur(14px);
-      -webkit-backdrop-filter: blur(14px);
-    }
-
-    .section-light .education-item,
-    .section-light .card {
-      background: rgba(255,255,255,0.90);
-      border: 1px solid var(--border-dark) !important;
-      box-shadow: var(--shadow-light);
-      backdrop-filter: blur(8px);
-      -webkit-backdrop-filter: blur(8px);
-    }
-
-    .education-item::after,
-    .card::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      border-radius: inherit;
-      padding: 1px;
-      background: linear-gradient(135deg, rgba(96,165,250,0.22), transparent, rgba(59,130,246,0.18));
-      -webkit-mask:
-        linear-gradient(#fff 0 0) content-box,
-        linear-gradient(#fff 0 0);
-      -webkit-mask-composite: xor;
-      mask-composite: exclude;
-      pointer-events: none;
-    }
-
-    .education-item:hover,
-    .card:hover {
-      transform: translateY(-8px);
-    }
-
-    .section-dark .education-item:hover,
-    .section-dark .card:hover {
-      box-shadow: 0 24px 50px rgba(2, 6, 23, 0.42);
-    }
-
-    .section-light .education-item:hover,
-    .section-light .card:hover {
-      box-shadow: 0 22px 45px rgba(15, 23, 42, 0.12);
-    }
-
-    .education-item {
-      padding: 28px !important;
-      height: 100%;
-    }
-
-    .education-item h3 {
-      font-size: 1.25rem;
-      margin-bottom: 12px;
-    }
-
-    .education-item ul {
-      padding-left: 20px;
-      margin-top: 10px;
-    }
-
-    .education-item li {
-      margin-bottom: 8px;
-    }
-
-    #Certificates img {
-      border-radius: 18px;
-      box-shadow: 0 14px 35px rgba(2, 6, 23, 0.22);
-      transition: 0.35s ease;
-      width: 100%;
-    }
-
-    #Certificates img:hover {
-      transform: scale(1.02);
-      box-shadow: 0 18px 45px rgba(37,99,235,0.18);
-    }
-
-    #Certificates p {
-      font-weight: 500;
-      margin-top: 12px;
-    }
-
-    #Skills i {
-      color: #60a5fa;
-      min-width: 22px;
-    }
-
-    .album-img-wrapper {
-      position: relative;
-      overflow: hidden;
-      border-radius: 26px;
-      box-shadow: 0 20px 50px rgba(2, 6, 23, 0.35);
-      border: 1px solid rgba(147,197,253,0.14);
-    }
-
-    .album-img {
-      height: 520px;
-      object-fit: cover;
-      transition: transform 0.6s ease;
-      border-radius: 26px;
-    }
-
-    .album-img-wrapper:hover .album-img {
-      transform: scale(1.05);
-    }
-
-    .album-overlay {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      padding: 28px;
-      background: linear-gradient(to top, rgba(2, 6, 23, 0.88), transparent);
-      color: white;
-      text-align: left;
-    }
-
-    .album-overlay h5 {
-      margin: 0;
-      color: white;
-      font-size: 1.25rem;
-      font-weight: 600;
-    }
-
-    .carousel-control-prev-icon,
-    .carousel-control-next-icon {
-      background-color: rgba(15, 23, 42, 0.7);
-      border-radius: 50%;
-      padding: 18px;
-      background-size: 55%;
-      box-shadow: 0 10px 25px rgba(2, 6, 23, 0.28);
-    }
-
-    #portfolio .card-img-top {
-      height: 220px;
-      object-fit: cover;
-      border-top-left-radius: 22px;
-      border-top-right-radius: 22px;
-    }
-
-    #portfolio .card-body {
-      padding: 24px;
-    }
-
-    #portfolio .card h5 {
-      font-size: 1.2rem;
-      margin-bottom: 12px;
-    }
-
-    #portfolio .btn-dark {
-      background: linear-gradient(135deg, var(--blue-2), var(--blue-1));
-      border: none;
-      border-radius: 999px;
-      padding: 10px 22px;
-      font-weight: 600;
-      transition: 0.3s ease;
-      box-shadow: 0 10px 22px rgba(37,99,235,0.22);
-    }
-
-    #portfolio .btn-dark:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 14px 28px rgba(37,99,235,0.30);
-    }
-
-    #Contact .btn {
-      border-radius: 999px;
-      padding: 12px 20px;
-      font-weight: 600;
-      transition: 0.3s ease;
-      min-width: 150px;
-      border-width: 1px;
-      color: #dbeafe;
-      border-color: rgba(147,197,253,0.30);
-      background: rgba(255,255,255,0.05);
-    }
-
-    #Contact .btn:hover {
-      color: #fff;
-      background: rgba(96,165,250,0.14);
-      transform: translateY(-2px);
-    }
-
-    #scrollTopBtn {
-      position: fixed;
-      bottom: 25px;
-      right: 25px;
-      display: none;
-      border: none;
-      outline: none;
-      background: linear-gradient(135deg, var(--blue-2), var(--blue-1));
-      color: white;
-      cursor: pointer;
-      padding: 12px 15px;
-      border-radius: 50%;
-      box-shadow: 0 12px 28px rgba(37,99,235,0.28);
-      z-index: 999;
-      transition: 0.3s ease;
-    }
-
-    #scrollTopBtn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 16px 32px rgba(37,99,235,0.35);
-    }
-
-    footer {
-      background: #040914;
-      text-align: center;
-      padding: 24px 15px;
-      color: #94a3b8;
-      font-size: 0.95rem;
-      border-top: 1px solid rgba(96,165,250,0.10);
-    }
-
-    footer a {
-      color: #93c5fd;
-      text-decoration: none;
-      font-weight: 600;
-    }
-
-    footer a:hover {
-      text-decoration: underline;
-    }
-
-    .fade-up {
-      opacity: 0;
-      transform: translateY(25px);
-      transition: all 0.8s ease;
-    }
-
-    .fade-up.show {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    @media (max-width: 991px) {
-      .navbar-collapse {
-        background: rgba(8, 19, 37, 0.96);
-        margin-top: 12px;
-        padding: 14px 18px;
-        border-radius: 18px;
-        box-shadow: 0 18px 35px rgba(2, 6, 23, 0.35);
-        border: 1px solid rgba(147,197,253,0.12);
-      }
-
-      .navbar-light .navbar-nav .nav-link {
-        margin-left: 0;
-        padding: 10px 0;
-      }
-
-      #home h1 {
-        font-size: 2.5rem;
-      }
-
-      .album-img {
-        height: 360px;
-      }
-    }
-
-    @media (max-width: 767px) {
-      section {
-        padding: 70px 0;
-      }
-
-      #home {
-        padding-top: 120px;
-      }
-
-      #home h1 {
-        font-size: 2rem;
-      }
-
-      .subtitle {
-        font-size: 1rem;
-      }
-
-      .quote {
-        font-size: 0.95rem;
-      }
-
-      .hero-buttons a {
-        width: 100%;
-        max-width: 260px;
-      }
-
-      .profile-pic {
-        width: 145px;
-        height: 145px;
-      }
-
-      .album-img {
-        height: 280px;
-      }
-
-      # .card-img-top {
-        height: 190px;
-      }
-
-      section h2 {
-        font-size: 1.8rem;
-      }
-
-      #Contact .btn {
-        width: 100%;
-        max-width: 250px;
-      }
-      /* Testimonials - Apple Style */
-.testimonial-card {
-  border-radius: 28px;
-  background: rgba(255,255,255,0.05);
-  border: 1px solid rgba(147,197,253,0.18);
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
-  box-shadow: 0 20px 60px rgba(2, 6, 23, 0.45);
-  transition: all 0.4s ease;
-  position: relative;
-  overflow: hidden;
+  scroll-behavior: smooth;
+}
+  margin:0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background:#0b0f1a;
+  color:#e5e7eb;
 }
 
-.testimonial-card::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(120deg, rgba(59,130,246,0.15), transparent, rgba(96,165,250,0.12));
-  opacity: 0;
-  transition: 0.4s ease;
+/* NAV */
+nav{
+  position:fixed;
+  width:100%;
+  top:0;
+  background: rgba(10,15,25,0.75);
+  backdrop-filter: blur(16px);
+  border-bottom:1px solid rgba(255,255,255,0.06);
+  z-index:999;
 }
 
-.testimonial-card:hover::before {
-  opacity: 1;
+nav a{
+  color:#cbd5e1;
+  margin-left:18px;
+  text-decoration:none;
+  font-weight:500;
 }
 
-.testimonial-card:hover {
-  transform: translateY(-10px) scale(1.01);
-  box-shadow: 0 30px 80px rgba(37,99,235,0.35);
+nav a:hover{
+  color:#60a5fa;
 }
 
-/* Featured (Apple highlight) */
-.testimonial-card.featured {
-  background: linear-gradient(135deg, rgba(59,130,246,0.18), rgba(15,23,42,0.85));
-  border: 1px solid rgba(96,165,250,0.35);
-  box-shadow: 0 30px 90px rgba(37,99,235,0.45);
+/* HERO */
+.hero{
+  text-align:center;
+  padding:0 20px;
+  height:80vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-direction:column;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(59,130,246,0.18), transparent 35%),
+    radial-gradient(circle at 80% 60%, rgba(16,185,129,0.12), transparent 40%);
 }
 
-.testimonial-card.featured h5 {
-  background: linear-gradient(90deg, #60a5fa, #93c5fd);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+.hero h1{
+  font-size:3.2rem;
+  font-weight:800;
+  letter-spacing:-1px;
 }
 
-/* Typography polish */
-#Testimonials p {
-  font-size: 0.95rem;
-  line-height: 1.8;
-  color: #cbd5e1;
+.hero p{
+  max-width:800px;
+  margin:20px auto;
+  color:#a5b4fc;
+  font-size:1.1rem;
 }
 
-#Testimonials h6,
-#Testimonials small {
-  color: #93c5fd;
+/* BUTTONS */
+.btn-primary{
+  background:#3b82f6;
+  border:none;
+  padding:12px 26px;
+  border-radius:999px;
+  font-weight:600;
 }
-    }
-  </style>
+
+.btn-outline{
+  border:1px solid #334155;
+  padding:12px 26px;
+  border-radius:999px;
+  color:#e5e7eb;
+}
+
+/* SECTIONS */
+section{
+  padding:90px 20px;
+}
+
+.container{
+  max-width:1050px;
+}
+
+/* CARDS */
+.card{
+  background:#111827;
+  border:1px solid rgba(255,255,255,0.06);
+  border-radius:18px;
+  padding:25px;
+  transition:0.3s ease;
+}
+
+.card:hover{
+  transform:translateY(-6px);
+  border-color: rgba(59,130,246,0.4);
+}
+
+h2{
+  text-align:center;
+  font-weight:700;
+}
+
+.sub{
+  text-align:center;
+  color:#94a3b8;
+  margin-bottom:40px;
+}
+
+/* PRICE */
+.price{
+  font-size:2rem;
+  font-weight:800;
+  color:#60a5fa;
+}
+
+/* CTA */
+.cta{
+  text-align:center;
+  background: linear-gradient(135deg, rgba(59,130,246,0.1), rgba(16,185,129,0.05));
+  border-top:1px solid rgba(255,255,255,0.05);
+}
+
+footer{
+  text-align:center;
+  padding:30px;
+  color:#64748b;
+  font-size:13px;
+}
+
+#portfolio .card{
+  background:#111827;
+  border:1px solid rgba(255,255,255,0.06);
+  border-radius:18px;
+  overflow:hidden;
+  transition:0.3s ease;
+}
+
+#portfolio .card:hover{
+  transform:translateY(-8px);
+  border-color: rgba(59,130,246,0.4);
+}
+
+#portfolio .card-img-top{
+  height:220px;
+  object-fit:cover;
+}
+
+.testimonial-card{
+  background:#111827;
+  border:1px solid rgba(255,255,255,0.06);
+  border-radius:18px;
+  transition:0.3s ease;
+}
+
+.testimonial-card:hover{
+  transform:translateY(-6px);
+  border-color: rgba(59,130,246,0.4);
+}
+
+.testimonial-card.featured{
+  border:1px solid rgba(59,130,246,0.5);
+  box-shadow: 0 20px 50px rgba(59,130,246,0.15);
+}
+</style>
 </head>
 
 <body>
-  <!-- Navbar -->
-  <header>
-    <nav class="navbar navbar-expand-lg navbar-light">
-      <div class="container">
-        <a class="navbar-brand" href="#home">
-          <img src="img/F.png" alt="logo" />
-        </a>
 
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
+<!-- NAV -->
+<nav>
+<div class="container d-flex justify-content-between align-items-center py-3">
+<strong style="color:white;">Jay Rotol</strong>
+<div>
+<a href="#services">Services</a>
+<a href="#pricing">Pricing</a>
+<a href="#portfolio">Portfolio</a>
+<a href="#Testimonials">Testimonials</a>
+<a href="#contact">Contact</a>
+</div>
+</div>
+</nav>
 
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="#Edu">Education</a></li>
-            <li class="nav-item"><a class="nav-link" href="#Skills">Skills</a></li>
-            <li class="nav-item"><a class="nav-link" href="#Certificates">Certificates</a></li>
-            <li class="nav-item"><a class="nav-link" href="#Album">Projects</a></li>
-            <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
-            <li class="nav-item"><a class="nav-link" href="#Contact">Contact</a></li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-  </header>
+<!-- HERO -->
+<section class="hero">
+<h1>High-Performance Websites & IT Systems That Drive Business Growth</h1>
 
-  <!-- Hero Section -->
-  <section id="home" class="section-dark">
-    <div class="container fade-up">
-      <img src="img/jay.jpg" alt="Profile Picture" class="profile-pic" />
-      <h1>Francis Jay Rotol</h1>
-      <p class="subtitle">IT Specialist • Web Developer • Network & Systems Administrator</p>
-      <p class="quote">Building reliable systems, modern websites, and future-ready digital solutions.</p>
+<p>
+I help businesses in the US build fast, conversion-focused websites and reliable IT systems that increase leads, improve operations, and reduce downtime.
+</p>
 
-      <div class="hero-buttons">
-        <a href="https://github.com/jay-rtl/Porfolio-Jay/raw/main/Resume03.pdf" target="_blank">Resume</a>
-        <a href="#Skills">Skills</a>
-        <a href="#Certificates">Certificates</a>
-        <a href="#portfolio">Portfolio</a>
-        <a href="#Contact">Contact</a>
-      </div>
-    </div>
-  </section>
+<a href="#contact" class="btn btn-primary m-2">Book Consultation</a>
+<a href="#pricing" class="btn btn-outline m-2">View Pricing</a>
+</section>
 
-  <!-- Education Section -->
-  <section id="Edu" class="section-light">
-    <div class="container">
-      <h2 class="fade-up">Education</h2>
-      <p class="section-subtitle fade-up">My academic foundation and certifications that shaped my technical and professional growth in IT and engineering.</p>
+<!-- EXPERTISE TOOLS -->
+<section id="tools">
+<div class="container">
 
-      <div class="row">
-        <div class="col-md-4 mb-4 fade-up">
-          <div class="education-item">
-            <h3>Villalimpia Elementary School</h3>
-            <p><strong>Elementary School</strong></p>
-            <p>Consistent 2nd honor student and Best in Math awardee.</p>
-          </div>
-        </div>
+<h2>Tools & Platforms I Work With</h2>
+<p class="sub">Modern tools used to build fast, scalable, and professional digital systems</p>
 
-        <div class="col-md-4 mb-4 fade-up">
-          <div class="education-item">
-            <h3>Holy Trinity Academy of Loay</h3>
-            <p><strong>Junior & Senior High School</strong></p>
-            <p>Awarded Computer System Services (CSS NC II) and Best Research Award.</p>
-          </div>
-        </div>
+<div class="row text-center">
 
-        <div class="col-md-4 mb-4 fade-up">
-          <div class="education-item">
-            <h3>Center for Industrial Technology and Enterprise (CITE)</h3>
-            <p><strong>Diploma in Computer Engineering Technology</strong></p>
-            <ul>
-              <li>GWA 1.55 (1st Trimester 2022)</li>
-              <li>CSS NC II – Aug 2022</li>
-              <li>EPAS NC II – Sept 2022</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+<div class="col-md-3 mb-4">
+<div class="card">
+<h5>Canva</h5>
+<p>Design for branding, marketing assets, and social media visuals.</p>
+</div>
+</div>
 
-  <!-- Certificates Section -->
-  <section id="Certificates" class="section-dark">
-    <div class="container">
-      <h2 class="fade-up">Certificates</h2>
-      <p class="section-subtitle fade-up">Recognitions and technical certifications that validate my knowledge in networking, systems, and professional IT work.</p>
+<div class="col-md-3 mb-4">
+<div class="card">
+<h5>CapCut</h5>
+<p>Short-form video editing for ads, reels, and promotional content.</p>
+</div>
+</div>
 
-      <div class="row">
-        <div class="col-md-6 mb-4 fade-up">
-          <img src="img/jay6.jpg" alt="Cisco CCNA7" class="img-fluid" />
-          <p class="text-center">Cisco CCNA7: Switching, Routing & Wireless Essentials (Oct 2022)</p>
-        </div>
-        <div class="col-md-6 mb-4 fade-up">
-          <img src="img/Comptia.jpg" alt="CompTIA" class="img-fluid" />
-          <p class="text-center">CompTIA Network+ (Jan 2025)</p>
-        </div>
-        <div class="col-md-6 mb-4 fade-up">
-          <img src="img/COE.jpg" alt="COE" class="img-fluid" />
-          <p class="text-center">Certificate of Employment (2025)</p>
-        </div>
-        <div class="col-md-6 mb-4 fade-up">
-          <img src="img/jay7.jpg" alt="CCNA EN" class="img-fluid" />
-          <p class="text-center">Cisco CCNA7: Enterprise Networking, Security & Automation (Jan 2023)</p>
-        </div>
-      </div>
-    </div>
-  </section>
+<div class="col-md-3 mb-4">
+<div class="card">
+<h5>WordPress</h5>
+<p>Business websites, blogs, and scalable content management systems.</p>
+</div>
+</div>
 
-  <!-- Skills Section -->
-  <section id="Skills" class="section-light">
-    <div class="container">
-      <h2 class="fade-up">Skills & Expertise</h2>
-      <p class="section-subtitle fade-up">A balanced combination of technical support, network administration, infrastructure management, and leadership in real-world IT environments.</p>
+<div class="col-md-3 mb-4">
+<div class="card">
+<h5>Elementor</h5>
+<p>High-converting landing pages and drag-and-drop web design builds.</p>
+</div>
+</div>
 
-      <div class="row">
-        <div class="col-md-6 mb-4 fade-up">
-          <div class="education-item">
-            <h3 class="mb-3">Technical Support & Troubleshooting</h3>
-            <p>Proficient in delivering IT support and troubleshooting across various systems to ensure smooth and reliable operations.</p>
-            <ul class="list-unstyled pl-3 mt-3">
-              <li class="mb-3">
-                <i class="fas fa-headset mr-2"></i>
-                <strong>IT Support:</strong> Provided technical assistance for theme park operations, supporting staff and infrastructure.
-              </li>
-              <li class="mb-3">
-                <i class="fas fa-tools mr-2"></i>
-                <strong>Hardware Troubleshooting:</strong> Diagnosed and repaired computers, network devices, and CCTV systems.
-              </li>
-              <li>
-                <i class="fas fa-cogs mr-2"></i>
-                <strong>Software Maintenance:</strong> Maintained UTAK, Retailware, and FIIX CMMS systems for stable performance.
-              </li>
-            </ul>
-          </div>
-        </div>
+<div class="col-md-3 mb-4">
+<div class="card">
+<h5>Microsoft Word</h5>
+<p>Professional document creation, proposals, reports, and business documentation.</p>
+</div>
+</div>
+<div class="col-md-3 mb-4">
+<div class="card">
+<h5>AI Tools & Automation</h5>
+<p>
+Use of AI tools for content creation, workflow automation, chatbot setup, and productivity systems for businesses.
+</p>
+</div>
+</div>
 
-        <div class="col-md-6 mb-4 fade-up">
-          <div class="education-item">
-            <h3 class="mb-3">Network & System Administration</h3>
-            <p>Experienced in configuring, managing, and maintaining network systems and devices for secure and efficient operations.</p>
-            <ul class="list-unstyled pl-3 mt-3">
-              <li class="mb-3">
-                <i class="fas fa-network-wired mr-2"></i>
-                <strong>Network Setup:</strong> Installed and maintained LAN/WAN networks using OC300 Omada Controller.
-              </li>
-              <li class="mb-3">
-                <i class="fas fa-fire mr-2"></i>
-                <strong>Firewall Configuration:</strong> Configured and maintained Fortinet firewalls for network security.
-              </li>
-              <li>
-                <i class="fas fa-server mr-2"></i>
-                <strong>Server & Virtualization:</strong> Managed VMware and Windows Server 2022, including AD and file sharing.
-              </li>
-            </ul>
-          </div>
-        </div>
+<div class="col-md-3 mb-4">
+<div class="card">
+<h5>Microsoft Excel</h5>
+<p>Data analysis, reporting, dashboards, and business tracking systems.</p>
+</div>
+</div>
 
-        <div class="col-md-6 mb-4 fade-up">
-          <div class="education-item">
-            <h3 class="mb-3">Website & Infrastructure Management</h3>
-            <p>Skilled in maintaining IT infrastructure, network systems, and software integration to support daily business operations.</p>
-            <ul class="list-unstyled pl-3 mt-3">
-              <li class="mb-3">
-                <i class="fas fa-desktop mr-2"></i>
-                <strong>System Administration:</strong> Managed internal systems, back-office software, and network-based platforms.
-              </li>
-              <li class="mb-3">
-                <i class="fas fa-network-wired mr-2"></i>
-                <strong>Infrastructure Maintenance:</strong> Installed and configured ITC and SPON IP speakers and amplifiers.
-              </li>
-              <li>
-                <i class="fas fa-laptop-code mr-2"></i>
-                <strong>Remote Support:</strong> Performed troubleshooting via AnyDesk and VNC for fast issue resolution.
-              </li>
-            </ul>
-          </div>
-        </div>
+<div class="col-md-3 mb-4">
+<div class="card">
+<h5>Google Sheets</h5>
+<p>Cloud-based spreadsheets, automation tracking, and collaborative business workflows.</p>
+</div>
+</div>
+</div>
 
-        <div class="col-md-6 mb-4 fade-up">
-          <div class="education-item">
-            <h3 class="mb-3">Leadership & Problem-Solving</h3>
-            <p>Demonstrated leadership and analytical thinking through hands-on project execution and technical issue resolution.</p>
-            <ul class="list-unstyled pl-3 mt-3">
-              <li class="mb-3">
-                <i class="fas fa-users mr-2"></i>
-                <strong>Team Leadership:</strong> Served as Lead Man on-site, supervising installations and project quality.
-              </li>
-              <li class="mb-3">
-                <i class="fas fa-lightbulb mr-2"></i>
-                <strong>Analytical Thinking:</strong> Identified root causes and resolved complex IT and network issues efficiently.
-              </li>
-              <li>
-                <i class="fas fa-tasks mr-2"></i>
-                <strong>Work Under Pressure:</strong> Maintained focus and accuracy during high-demand operational periods.
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+</div>
+</section>
 
-  <!-- Project Album Section -->
-  <section id="Album" class="section-dark">
-    <div class="container text-center">
-      <h2 class="fade-up">Project Album</h2>
-      <p class="section-subtitle fade-up">A visual showcase of my hands-on work in CCTV systems, structured cabling, maintenance, and on-site technical support.</p>
+<!-- SERVICES -->
+<section id="services">
+<div class="container">
 
-      <div id="albumCarousel" class="carousel slide carousel-fade fade-up" data-ride="carousel">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <div class="album-img-wrapper">
-              <img src="img/jay1.jpg" class="d-block w-100 album-img" alt="CCTV Installation">
-              <div class="album-overlay">
-                <h5>CCTV Installation</h5>
-              </div>
-            </div>
-          </div>
+<h2>What I Deliver</h2>
+<p class="sub">Business-focused solutions, not just design</p>
 
-          <div class="carousel-item">
-            <div class="album-img-wrapper">
-              <img src="img/francis3.jpg" class="d-block w-100 album-img" alt="Network Setup">
-              <div class="album-overlay">
-                <h5>Network Setup</h5>
-              </div>
-            </div>
-          </div>
+<div class="row">
 
-          <div class="carousel-item">
-            <div class="album-img-wrapper">
-              <img src="img/francis2.jpg" class="d-block w-100 album-img" alt="CCTV System">
-              <div class="album-overlay">
-                <h5>CCTV System</h5>
-              </div>
-            </div>
-          </div>
+<div class="col-md-4 mb-4">
+<div class="card">
+<h5>Web Development</h5>
+<p>Modern, fast, mobile-first websites built for conversion.</p>
+</div>
+</div>
 
-          <div class="carousel-item">
-            <div class="album-img-wrapper">
-              <img src="img/francis4.jpg" class="d-block w-100 album-img" alt="Structured Cabling">
-              <div class="album-overlay">
-                <h5>Structured Cabling</h5>
-              </div>
-            </div>
-          </div>
+<div class="col-md-4 mb-4">
+<div class="card">
+<h5>IT Infrastructure</h5>
+<p>Networks, servers, firewall, system optimization.</p>
+</div>
+</div>
 
-          <div class="carousel-item">
-            <div class="album-img-wrapper">
-              <img src="img/francis5.png" class="d-block w-100 album-img" alt="System Maintenance">
-              <div class="album-overlay">
-                <h5>System Maintenance</h5>
-              </div>
-            </div>
-          </div>
+<div class="col-md-4 mb-4">
+<div class="card">
+<h5>Business Systems</h5>
+<p>Booking systems, automation, CRM integration.</p>
+</div>
+</div>
 
-          <div class="carousel-item">
-            <div class="album-img-wrapper">
-              <img src="img/francis1.jpg" class="d-block w-100 album-img" alt="On-site Support">
-              <div class="album-overlay">
-                <h5>CCTV Monitoring & Troubleshooting</h5>
-              </div>
-            </div>
-          </div>
-        </div>
+</div>
+</div>
+</section>
 
-        <a class="carousel-control-prev" href="#albumCarousel" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        </a>
-        <a class="carousel-control-next" href="#albumCarousel" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        </a>
-      </div>
-    </div>
-  </section>
+<!-- PRICING -->
+<section id="pricing">
+<div class="container">
 
-  <!-- Website  Section -->
- <!-- Website Portfolio Section (FIXED) -->
-<section id="portfolio" class="section-light">
-  <div class="container">
+<h2>Investment Packages</h2>
+<p class="sub">Simple pricing for serious clients only</p>
 
-    <h2 class="fade-up">Website Development Portfolio</h2>
-    <p class="section-subtitle fade-up">
-      Selected websites I designed and developed for coaching and business clients.
-    </p>
+<div class="row">
 
-    <!-- IMPORTANT FIX: ROW WRAPPER -->
-    <div class="row justify-content-center">
+<!-- STARTER -->
+<div class="col-md-4 mb-4">
+<div class="card text-center">
+<h5>Starter Website</h5>
+<p class="price">$150</p>
+<p>1 Page Landing Page</p>
+<p>Mobile Optimized</p>
+<p>Contact Form</p>
+<p>Basic UI Design</p>
+</div>
+</div>
 
-      <div class="col-md-4 mb-4 fade-up">
-        <div class="card shadow-sm border-0 h-100">
-          <img src="img/webs2.png" class="card-img-top" alt="Website 1">
-          <div class="card-body text-center">
-            <h5>Esperanza Coaching Collective</h5>
-            <p>Guiding Couples Through Infertility, Grief, and Loss with Compassionate Coaching</p>
-            <a href="https://esperanzacoachingcollective.com/" target="_blank" class="btn btn-dark">Visit Website</a>
-          </div>
-        </div>
-      </div>
+<!-- BUSINESS -->
+<div class="col-md-4 mb-4">
+<div class="card text-center" style="border:1px solid #3b82f6;">
+<h5>Business Growth</h5>
+<p class="price">$500 – $1,000</p>
+<p>Multi-page Website</p>
+<p>WordPress / Elementor</p>
+<p>SEO Ready</p>
+<p>Lead System</p>
+</div>
+</div>
 
-      <div class="col-md-4 mb-4 fade-up">
-        <div class="card shadow-sm border-0 h-100">
-          <img src="img/marga2.png" class="card-img-top" alt="Website 2">
-          <div class="card-body text-center">
-            <h5>MG Transformation</h5>
-            <p>Identity Transformation Coach & NLP Master Practitioner</p>
-            <a href="https://margaritagrigoryan.com/" target="_blank" class="btn btn-dark">Visit Website</a>
-          </div>
-        </div>
-      </div>
+<!-- PREMIUM -->
+<div class="col-md-4 mb-4">
+<div class="card text-center">
+<h5>Full System Build</h5>
+<p class="price">$2,000+</p>
+<p>Website + Automation</p>
+<p>CRM Integration</p>
+<p>Business Optimization</p>
+<p>Ongoing Support</p>
+</div>
+</div>
 
-      <div class="col-md-4 mb-4 fade-up">
-        <div class="card shadow-sm border-0 h-100">
-          <img src="img/site6.png" class="card-img-top" alt="Website 3">
-          <div class="card-body text-center">
-            <h5>Mariita C. Cuervo</h5>
-            <p>Wellness website for therapy services and online consultation booking.</p>
-            <a href="https://mariitacuervo.com/" target="_blank" class="btn btn-dark">Visit Website</a>
-          </div>
-        </div>
-      </div>
+</div>
+
+</div>
+</section>
+
+<section id="portfolio" class="section-dark">
+
+<div class="container">
+
+<h2 class="fade-up">Website Development Portfolio</h2>
+
+<p class="section-subtitle fade-up">
+Selected high-conversion websites designed and developed for coaching, wellness, and personal brand businesses.
+</p>
+
+<div class="row justify-content-center">
+
+<!-- PROJECT 1 -->
+<div class="col-md-4 mb-4 fade-up">
+  <div class="card h-100">
+
+    <img src="img/webs2.png" class="card-img-top" alt="Esperanza Coaching">
+
+    <div class="card-body text-center">
+
+      <h5>Esperanza Coaching Collective</h5>
+
+      <p>
+        High-conversion coaching website built to support emotional healing services, client trust, and booking conversion flow.
+      </p>
+
+      <a href="https://esperanzacoachingcollective.com/" target="_blank" class="btn btn-primary">
+        View Live Site
+      </a>
 
     </div>
   </div>
+</div>
+
+<!-- PROJECT 2 -->
+<div class="col-md-4 mb-4 fade-up">
+  <div class="card h-100">
+
+    <img src="img/marga2.png" class="card-img-top" alt="MG Transformation">
+
+    <div class="card-body text-center">
+
+      <h5>MG Transformation</h5>
+
+      <p>
+        Personal brand authority website designed for identity transformation coaching and premium positioning.
+      </p>
+
+      <a href="https://margaritagrigoryan.com/" target="_blank" class="btn btn-primary">
+        View Live Site
+      </a>
+
+    </div>
+  </div>
+</div>
+
+<!-- PROJECT 3 -->
+<div class="col-md-4 mb-4 fade-up">
+  <div class="card h-100">
+
+    <img src="img/site6.png" class="card-img-top" alt="Wellness Website">
+
+    <div class="card-body text-center">
+
+      <h5>Wellness Consultation Platform</h5>
+
+      <p>
+        Professional wellness website designed for therapy services, consultation booking, and client onboarding.
+      </p>
+
+      <a href="https://mariitacuervo.com/" target="_blank" class="btn btn-primary">
+        View Live Site
+      </a>
+
+    </div>
+  </div>
+</div>
+
+</div>
+
+</div>
+
 </section>
 
-  <!-- Testimonials Section (Apple Style) -->
 <section id="Testimonials" class="section-dark">
   <div class="container text-center">
-    <h2 class="fade-up">What Clients Say</h2>
+
+    <h2 class="fade-up">Client Testimonials</h2>
+
     <p class="section-subtitle fade-up">
-      Real feedback from clients I’ve worked with — built on trust, clarity, and results.
+      Feedback from clients who trusted me to build their websites and digital systems.
     </p>
 
     <div class="row justify-content-center">
 
-      <!-- Featured Testimonial -->
+      <!-- FEATURED TESTIMONIAL -->
       <div class="col-lg-8 mb-4 fade-up">
         <div class="testimonial-card featured p-5 text-left">
+
           <p class="mb-3">
-            “I just have to say this to you directly… I’m honestly amazed.
-            You didn’t just build me a website, you understood me.
-            The vision, the feeling, the identity—I couldn’t even explain it properly,
-            yet you brought it to life.”
+            “I just have to say this directly… I’m honestly impressed.
+            You didn’t just build a website—you understood my brand on a deeper level.”
           </p>
 
           <p class="mb-3">
-            “Every detail feels intentional. Clean. Powerful. Elevated.
-            It’s not just beautiful—it feels like my brand.”
+            “The structure, the design, the flow… everything feels intentional and aligned with my coaching business.”
           </p>
 
           <p class="mb-3">
-            “No confusion. No stress. Just clarity and results.
-            You don’t just design—you see the bigger picture.”
+            “It’s not just a website—it elevated how I present myself to clients.”
           </p>
 
           <p class="mb-4">
-            “This wasn’t just a website for me. This was a level-up.”
+            “This was a real upgrade to my business, not just a design project.”
           </p>
 
           <h5 class="mb-0">— Margarita Grigoryan</h5>
-          <small>Owner, MG Transformation</small>
+          <small>Founder, MG Transformation</small>
+
         </div>
       </div>
 
-      <!-- Testimonial 2 -->
+      <!-- TESTIMONIAL 2 -->
       <div class="col-md-4 mb-4 fade-up">
         <div class="testimonial-card p-4">
+
           <p>
-            “Smooth process from start to finish. Clean design, strong communication,
-            and very professional overall.”
+            “Very smooth experience. Communication was clear, and the website came out professional and clean.”
           </p>
-          <h6 class="mt-3 mb-0">— Coaching Client</h6>
+
+          <h6 class="mt-3 mb-0">— Coaching Client (USA)</h6>
+          <small>Business Owner</small>
+
         </div>
       </div>
 
-      <!-- Testimonial 3 -->
+      <!-- TESTIMONIAL 3 -->
       <div class="col-md-4 mb-4 fade-up">
-  <div class="testimonial-card p-4">
-    <p>
-      “Working with Francis Rotol was an exceptional experience. He turned my vision into a refined, professional website that truly reflects my brand.
-      He was detail-oriented, responsive, and easy to work with throughout the entire process.
-      The final result exceeded my expectations.”
-    </p>
+        <div class="testimonial-card p-4">
 
-    <h6 class="mt-3 mb-0">— Michelle Savage</h6>
-    <small>Owner, Esperanza Coaching Collective</small>
-  </div>
-</div>
+          <p>
+            “Francis delivered beyond expectations. He turned my ideas into a structured, high-quality website that reflects my brand identity perfectly.”
+          </p>
+
+          <h6 class="mt-3 mb-0">— Michelle Savage</h6>
+          <small>Owner, Esperanza Coaching Collective</small>
+
+        </div>
+      </div>
+
+      <!-- OPTIONAL 4TH (SOCIAL PROOF STYLE) -->
+      <div class="col-md-4 mb-4 fade-up">
+        <div class="testimonial-card p-4">
+
+          <p>
+            “Professional, fast, and very easy to work with. The output looked like a premium agency build.”
+          </p>
+
+          <h6 class="mt-3 mb-0">— Client Feedback</h6>
+          <small>Service-Based Business</small>
+
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
 
-  <!-- Contact Section -->
-  <section id="Contact" class="section-dark">
-    <div class="container text-center">
-      <h2 class="fade-up">Contact Me</h2>
-      <p class="section-subtitle fade-up">Feel free to reach out for IT support, website development, networking projects, or collaboration opportunities.</p>
+<!-- CTA -->
+<section id="contact" class="cta">
+<div class="container">
 
-      <div class="d-flex justify-content-center flex-wrap fade-up">
-        <a href="mailto:rotoljay03@gmail.com" class="btn m-2">
-          <i class="fas fa-envelope mr-2"></i>Email
-        </a>
-        <a href="tel:+639615939457" class="btn m-2">
-          <i class="fas fa-phone mr-2"></i>Call
-        </a>
-        <a href="https://www.facebook.com/jayrotol05" target="_blank" class="btn m-2">
-          <i class="fab fa-facebook-f mr-2"></i>Facebook
-        </a>
-        <a href="https://www.instagram.com/jay.rtll/" target="_blank" class="btn m-2">
-          <i class="fab fa-instagram mr-2"></i>Instagram
-        </a>
-      </div>
-    </div>
-  </section>
+<h2>Let’s Build Your System</h2>
+<p class="sub">
+Serious businesses only. Let’s create something that actually generates results.
+</p>
 
-  <!-- Scroll-to-Top Button -->
-  <button id="scrollTopBtn" title="Go to top">
-    <i class="fas fa-chevron-up"></i>
-  </button>
+<a href="mailto:rotoljay03@gmail.com" class="btn btn-primary m-2">Email Me</a>
+<a href="tel:+639615939457" class="btn btn-outline m-2">Call Now</a>
 
-  <!-- Footer -->
-  <footer>
-    © 2025 Francis Jay Rotol. All rights reserved. |
-    <a href="https://jay-rtl.github.io/Porfolio-Jay/#contact" target="_blank">View My GitHub</a>
-  </footer>
+</div>
+</section>
 
-  <!-- Scripts -->
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<footer>
+© 2026 Jay Rotol — Premium Web & IT Systems
+</footer>
+<script>
+document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
 
-  <script>
-    const scrollBtn = document.getElementById("scrollTopBtn");
-    window.onscroll = function () {
-      scrollBtn.style.display =
-        document.documentElement.scrollTop > 200 ? "block" : "none";
-    };
+    const target = document.querySelector(this.getAttribute('href'));
 
-    scrollBtn.addEventListener("click", () =>
-      window.scrollTo({ top: 0, behavior: "smooth" })
-    );
-
-    const faders = document.querySelectorAll(".fade-up");
-
-    const appearOptions = {
-      threshold: 0.15
-    };
-
-    const appearOnScroll = new IntersectionObserver(function(entries, observer) {
-      entries.forEach(entry => {
-        if (!entry.isIntersecting) return;
-        entry.target.classList.add("show");
-        observer.unobserve(entry.target);
+    if (target) {
+      window.scrollTo({
+        top: target.offsetTop - 70,
+        behavior: "smooth"
       });
-    }, appearOptions);
-
-    faders.forEach(fader => {
-      appearOnScroll.observe(fader);
-    });
-
-    const sections = document.querySelectorAll("section");
-    const navLinks = document.querySelectorAll(".nav-link");
-
-    window.addEventListener("scroll", () => {
-      let current = "";
-      sections.forEach(section => {
-        const sectionTop = section.offsetTop - 140;
-        if (pageYOffset >= sectionTop) {
-          current = section.getAttribute("id");
-        }
-      });
-
-      navLinks.forEach(link => {
-        link.classList.remove("active");
-        if (link.getAttribute("href") === "#" + current) {
-          link.classList.add("active");
-        }
-      });
-    });
-  </script>
+    }
+  });
+});
+</script>
 </body>
 </html>
