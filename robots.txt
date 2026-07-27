@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://francisjay.dev/sitemap.xml
+Sitemap: https://jay-rtl.github.io/Portfolio/sitemap.xml
